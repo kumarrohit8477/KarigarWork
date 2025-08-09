@@ -1,0 +1,259 @@
+*{
+    padding:0px;
+    margin:0px;
+    color: black;
+    text-decoration: none;
+
+}
+
+body{
+   background-color: #FDF7F4;
+}
+
+nav{
+    position:sticky;
+    top:0;
+    backdrop-filter:blur(45px);
+    height:7vh;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 20px;
+    color: beige;
+    background-color:#507687;
+    border-bottom: 3px groove #001F3F;
+}
+
+.logo{
+    font-size: 35px;
+}
+
+
+#select {
+    height:50px;
+    width:auto;
+    padding-top:10px;
+    padding-left:10vh;
+    font-size:30px;
+     background-color:#B3C8CF;
+}
+
+
+a{
+    margin-right: 20px;
+}
+button{
+    height: 30px;
+    width: 70px;
+    background-color:beige ;
+    border-radius: 5px;
+   
+}
+input{
+    height: 25px;
+}
+#details{
+    margin-left:500px;
+    color:yellow;
+    display: inline-block;
+}
+#abc{
+     margin: 10px;
+    padding:10px;
+}
+
+
+#container{
+    height:91vh;
+    max-width:100vw;
+    background-color: #F1F0E8;
+    overflow: hidden; 
+}
+
+
+#left_to_slideshow{
+    height:77vh;
+    width:112vh;
+    padding:4vh;
+    padding-top:12vh;
+    text-align:left;
+    display: inline-block;
+    overflow:hidden;
+}
+
+#welcome{
+    padding-left: 20px;
+    text-align:left;
+    font-size: 30px;
+    display: inline-block;
+    width: 10ch;
+    border-right: 3px solid;
+    white-space: nowrap;
+    animation: typing 2s steps(10), blink .5s step-end infinite alternate;
+}
+@keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
+#heading{
+    padding-left:20px;
+    text-align:left;
+    font-size: 120px;
+    font-weight: bolder;
+}
+
+#punchline1{
+    padding-left:20px;
+    text-align: left;
+    font-size:40px;
+    font-weight: bolder;
+}
+
+
+
+#info_about1{
+    height: 100px;
+    text-align: left;
+    font-size:20px;
+    padding-top:20px;
+    padding-left:20px;
+    
+}
+
+#info_about2{
+    text-align: left;
+    font-size:25px;
+    font-weight:bold;
+    padding-left:15px;
+}
+
+
+#info_about3{
+    height: 50px;
+    text-align: left;
+    font-size:25px;
+    font-weight:bold;
+    padding-top:20px;
+    padding-left:15px;
+}
+
+
+
+#slideframe{
+    /* margin:4vh; */
+    margin-bottom:14vh;
+    margin-left: 0px;
+    height:63vh;
+    width:88vh;
+    background:url(paper.gif),right bottom no-repeat;
+    /* background-color: bisque; */
+    text-align:left;
+    display: inline-block;
+    overflow:hidden;
+}
+
+
+.content{
+    padding-left: 5px;
+    height:130vh;
+    width:auto;
+    background-color:#ECEBDE;
+}
+
+#survices{
+    margin-left: 10px;
+    font-size: larger;
+    color: purple;
+}
+
+.content1{
+    margin-top: 10px;
+    margin-left:10px;
+    margin-right:10px ;
+    height:250px;
+    width: 300px;
+    padding: 10px;
+    padding-bottom: 0px;
+    border-radius: 10px;
+    background-color:whitesmoke;
+    display: inline-block;
+}
+#margin{
+    padding: 50px;
+    padding-top: 0px;
+ }
+
+#imgg{
+    border: 1px groove #ddd;
+    border-radius: 10px;
+    box-shadow: outset;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+#imgg:hover {
+    transform: scale(1.05);
+}
+footer{
+    margin: 10px;
+    height: 550px;
+    width: auto;
+    background-color:#E5E1DA;
+    border:2px,groove;
+    border-radius:5px;
+ }
+ #topfooter{
+    height: 50px;
+    width: auto;
+    padding-top:18px;
+    padding-left: 10px;
+    background-color: #B3C8CF;
+ }
+ #midfooter{
+    padding:20px;
+    margin-left:55px;
+}
+.info{
+   font-size: 18px;
+   font-style:normal;
+   font-weight:lighter;
+}
+ .midf{
+    padding: 10px;
+    margin-top: 50px;
+    height: 280px;
+    width:220px;
+    margin: 10px;
+    background-color: whitesmoke;
+    border-radius:10px;
+    font-family:  'Arial Narrow', Arial, sans-serif,'Franklin Gothic Medium';
+    font-size: 22px;
+    font-weight: bolder;
+    display: inline-block;
+ }
+ #bottomfooter{
+    padding: 20px;
+    padding-left:370px;
+    height:50px;
+    width:auto;
+    background-color:#89A8B2;
+ }
+
+i{
+    font-size: 10px;
+ }
+ ::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color:gainsboro;
+    border-radius: 10px;
+}
