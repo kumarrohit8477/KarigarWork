@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart - Karigar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        
+        .cart-container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .product:last-child {
+            border-bottom: none;
+        }
+        
+        .product button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        
+        .product button.remove {
+            background-color: #dc3545;
+        }
+        
+        .total {
+            text-align: right;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My Cart - Karigar</h1>
+    <div class="cart-container" id="cart">
+        <div class="product">
+            <span>Product 1 - $10</span>
+            <button onclick="addToCart('Product 1', 10)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <span>Product 2 - $15</span>
+            <button onclick="addToCart('Product 2', 15)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <span>Product 3 - $20</span>
+            <button onclick="addToCart('Product 3', 20)">Add to Cart</button>
+        </div>
+        <h2>Items in Cart:</h2>
+        <div id="cart-items"></div>
+        <div class="total" id="total">Total: $0</div>
+    </div>
+
+    <script>
+        let cart = [];
+        let totalAmount = 0;
+
+        function addToCart(productName, price) {
+            cart.push({
+                name: productName,
+                price: price
+            });
+            totalAmount += price;
+            updateCart();
+        }
+
+        function removeFromCart(index) {
+            totalAmount -= cart[index].price;
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItemsDiv = document.getElementById('cart-items');
+            cartItemsDiv.innerHTML = '';
+            cart.forEach((item, index) => {
+                cartItemsDiv.innerHTML += `
+                    <div class="product">
+                        <span>${item.name} - $${item.price}</span>
+                        <button class="remove" onclick="removeFromCart(${index})">Remove</button>
+                    </div>
+                `;
+            });
+            document.getElementById('total').innerText = `Total: $${totalAmount}`;
+        }
+    </script>
+
+</body>
+
+</html>

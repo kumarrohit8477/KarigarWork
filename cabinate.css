@@ -1,0 +1,145 @@
+* {
+    margin: 0PX;
+    padding: 0px;
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    height: 100vh;
+    background-color: grey;
+
+
+}
+#navbar{
+    background-color: #507687;
+    position: fixed;
+    height:8vh;
+    width:100%;
+}
+#logo{
+    font-size: 50px;
+    margin-left: 15px;
+    display: inline-block;
+}
+.icon{
+    font-size: 50px;
+    margin-left: 1230px;
+    /* background-color: brown; */
+    display: inline-block;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color:gainsboro;
+    border-radius: 10px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 8%;
+    left: 0;
+    width: 300px;
+    height: 90%;
+    background-color:#B3C8CF;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 5px 0 20px;
+    z-index: 100;
+}
+
+.scrollbox {
+    overflow: auto;
+    padding-right: 10px;
+    visibility: visible;
+}
+
+.scrollbox-inner,
+.scrollbox:hover {
+    visibility: visible;
+} 
+
+/* .scrollbox-inner {
+    font-size: 16px;
+    color:whitesmoke;
+} */
+
+.content{
+    position:fixed;
+    margin-top: 8vh;
+    left: 325px;
+    padding:20px;
+    padding-right: 0px;
+    width: calc(100% - 345px);
+    height: 90vh;
+    background-color:#ECEBDE;
+    overflow: auto;
+    
+}
+
+
+.item{
+    height: 200px;
+    width: 250px;
+    margin-bottom:20px;
+    margin-left:5px;
+    background-color:whitesmoke;
+    border: 1px  groove;
+    box-shadow: 2px inset;
+    border-radius: 10px;
+    padding: 10px;
+    padding-left:5px;
+    text-align:left;
+    font-size:20px;
+    display: inline-block;
+}
+.limgSize {
+    margin-left:8px;
+    border: 1px solid whitesmoke;
+    border-radius: 10px; 
+    width:230px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;  
+}
+.limgSize:hover {
+    transform: scale(1.05);
+}
+section{
+    height:auto;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: gainsboro;
+}
+.listname{
+    font-size: 40px;
+    font-weight: bolder;
+    padding-left:20px;
+}
+.list{
+    margin-left:10px;
+    margin-bottom:10px;
+    height: 350px;
+    width: 350px;
+    padding:10px;
+    background-color:whitesmoke;
+    border-radius: 10px;
+    /* position:static; */
+    display: inline-block;
+    
+}
+.rimgSize {
+    margin-left:8px;
+    border: 2px groove #E5E1DA;
+    border-radius: 10px; 
+    width:330px;
+ 
+}
+button{
+    margin-top:5px;
+    height: 30px;
+    width: 100px;
+}

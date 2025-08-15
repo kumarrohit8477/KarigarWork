@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders - Karigar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        
+        .order-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .order {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        
+        .order:last-child {
+            border-bottom: none;
+        }
+        
+        .order-details {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .order-status {
+            color: green;
+        }
+        
+        .order-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .order-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My Orders</h1>
+    <div class="order-container" id="orderContainer">
+
+    </div>
+
+    <script>
+        // Sample order data
+        const orders = [{
+            id: 1,
+            item: "bed",
+            status: "Shipped"
+        }, {
+            id: 2,
+            item: "ac",
+            status: "Delivered"
+        }, {
+            id: 3,
+            item: "tank cleaner",
+            status: "Processing"
+        }, ];
+
+        function displayOrders() {
+            const orderContainer = document.getElementById('orderContainer');
+            orderContainer.innerHTML = ''; // Clear existing orders
+
+            orders.forEach(order => {
+                const orderDiv = document.createElement('div');
+                orderDiv.className = 'order';
+                orderDiv.innerHTML = `
+                    <div class="order-details">
+                        <div><strong>Order ID:</strong> ${order.id}</div>
+                        <div><strong>Item:</strong> ${order.item}</div>
+                        <div class="order-status"><strong>Status:</strong> ${order.status}</div>
+                    </div>
+                    <button class="order-button" onclick="viewOrder(${order.id})">View Order</button>
+                `;
+                orderContainer.appendChild(orderDiv);
+            });
+        }
+
+        function viewOrder(orderId) {
+            alert(`Viewing details for Order ID: ${orderId}`);
+
+        }
+        displayOrders();
+    </script>
+
+</body>
+
+</html>
