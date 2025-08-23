@@ -13,7 +13,6 @@ body{
 nav{
     position:sticky;
     top:0;
-    backdrop-filter:blur(45px);
     height:7vh;
     padding-left: 10px;
     padding-top: 10px;
@@ -24,7 +23,8 @@ nav{
 }
 
 .logo{
-    font-size: 35px;
+    height: 70px;
+
 }
 
 
