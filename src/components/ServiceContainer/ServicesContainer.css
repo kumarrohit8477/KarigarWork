@@ -1,0 +1,26 @@
+.conFirst {
+  margin: 40px auto;
+  width: 85vw;
+  height: auto;
+  border-radius: 10px;
+  background-color: #e9f4ef;
+}
+
+.srvcs {
+  padding: 10px;
+  padding-bottom: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #250202;
+}
+
+.servicesGrid {
+  width: 100%;
+  padding: 35px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  justify-content: center;
+  align-items: start;
+}

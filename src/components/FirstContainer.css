@@ -1,0 +1,149 @@
+.firstContainer {
+  height: calc(100vh - 100px);
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  margin: auto; /* I added this to help center it */
+}
+
+.lfirstContainer {
+  height: calc(100vh - 100px);
+  width: 47%;
+  padding-left: 50px;
+  background: #fffdfd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.upbox {
+  width: 490px;
+  margin-top: 40px;
+  display: flex;
+  font-size: 50px;
+  font-weight: bold; /* Added for emphasis */
+  color: #222; /* Added for clarity */
+}
+
+/* You can still use ID selectors, but it's often
+  better to use classes with CSS Modules.
+  I'll leave this as-is since your JSX uses it.
+*/
+#midboxpara {
+  width: 490px;
+  font-size: 30px;
+  margin-bottom: 1rem; /* Added margin */
+}
+
+.midbox {
+  height: 350px;
+  width: 490px;
+  padding: 20px;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 12px; /* Added rounded corners */
+}
+
+.midboxicons {
+  margin: auto;
+  height: 120px;
+  width: 140px;
+  border-radius: 10px;
+  background: #efeeee;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500; /* Added font weight */
+  color: #333; /* Added text color */
+}
+
+/* This nested selector works perfectly in CSS Modules! */
+.midbox .midboxicons .mbii {
+  width: 60%;
+  margin-bottom: 8px; /* Added spacing */
+}
+
+/* So do pseudo-selectors like :hover */
+.midboxicons:hover {
+  background: #e0dfdf;
+  transform: scale(1.05);
+}
+
+.botbox {
+  width: 490px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem; /* Added margin */
+}
+
+.sbotbox {
+  height: 100px;
+  width: 244px;
+  padding: 15px;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 12px; /* Added rounded corners */
+}
+
+.sbottext {
+  font-size: 15px;
+  line-height: 1.4; /* Added line height */
+}
+
+.sbotimg {
+  height: 40px;
+  width: 40px;
+}
+
+.rfirstContainer {
+  height: calc(100vh - 100px);
+  width: 53%;
+  background: #efeeee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#slider {
+  border-radius: 10px;
+}
+
+/* Media queries also work perfectly */
+@media screen and (max-width: 768px) {
+  .firstContainer {
+    flex-direction: column;
+    width: 100vw; /* Use full width on mobile */
+    height: auto;
+  }
+
+  .lfirstContainer,
+  .rfirstContainer {
+    width: 100%;
+    height: auto;
+    padding: 20px; /* Add padding for mobile */
+  }
+
+  .upbox,
+  #midboxpara,
+  .midbox,
+  .botbox {
+    width: 100%; /* Make elements full-width */
+  }
+
+  .rfirstContainer {
+    padding: 0;
+  }
+
+  #slider {
+    width: 100%;
+    border-radius: 0;
+  }
+}

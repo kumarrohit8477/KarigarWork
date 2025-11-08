@@ -1,0 +1,54 @@
+.Containerbox {
+  height: 300px;
+  width: 250px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgb(96, 92, 92);
+  background-color: rgb(235, 255, 248);
+}
+
+.Containerbox:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.sName {
+
+  height: 30%;
+  font-size: 18px;
+  color: #000000;
+  text-align: left;
+  padding: 12px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.imgSize {
+  height:70%;
+  width: 100%;
+  
+  object-fit: cover;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* ✅ Optional: Responsive tweak for smaller screens */
+@media (max-width: 600px) {
+  .Containerbox {
+    width: 90%;
+    height: auto;
+  }
+
+  .sName {
+    font-size: 16px;
+    height: auto;
+  }
+}

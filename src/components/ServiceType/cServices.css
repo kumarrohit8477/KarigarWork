@@ -1,0 +1,109 @@
+/* ====== SERVICE CARD CONTAINER ====== */
+.svces {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  height: 180px;
+  background-color: #f7eaea;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+/* ====== LEFT SIDE: SERVICE DETAILS ====== */
+.ite {
+  flex: 1;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+  text-align: left;
+  margin: 4px 0;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.4;
+}
+
+.snme {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+.dtls {
+  cursor: pointer;
+  color: #1a73e8;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.dtls:hover {
+  color: #0b59d0;
+  text-decoration: underline;
+}
+
+/* ====== RIGHT SIDE: IMAGE + BUTTON ====== */
+.item {
+  width: 200px;
+  height: 100%;
+  background-color: #e6dcdc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+  position: relative;
+}
+
+.item img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  background-color: #c2c2c2;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.item img:hover {
+  transform: scale(1.05);
+}
+
+/* ====== BUTTON ====== */
+button {
+  padding: 8px 16px;
+  height: 40px;
+  width: 90px;
+  background-color: #6b275f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #8a2e78;
+  transform: translateY(-2px);
+}
+
+/* ====== GLOBAL TEXT RESET ====== */
+p {
+  margin: 0;
+  padding: 0;
+}

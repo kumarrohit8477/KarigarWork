@@ -1,0 +1,66 @@
+.mainbox {
+  height: 70vh;
+  padding: 25px 25px 0;
+  width: 100vw;
+  background-color: #bf7c7c;
+}
+
+.title {
+  font-size: 35px;
+  font-weight: 600;
+  color: white;
+  padding-bottom: 10px;
+}
+
+.thirdContainerMain {
+  position: relative;
+  padding-left: 20px;
+}
+
+.thirdContainerMain i {
+  height: 50px;
+  width: 50px;
+
+  color: rgb(77, 75, 75);
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.25rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  overflow: visible;
+   background: rgb(255, 255, 255) !important;
+  z-index: 100;
+}
+
+.thirdContainerMain i:first-child {
+  left: -22px;
+}
+
+.thirdContainerMain i:last-child {
+  right: -22px;
+}
+.thirdContainerMainInner {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 5) - 10px);
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.thirdContainerMainInner.dragging {
+  cursor: pointer;
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.thirdContainerMainInner::-webkit-scrollbar {
+  display: none;
+}

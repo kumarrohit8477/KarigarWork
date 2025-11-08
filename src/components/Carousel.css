@@ -1,0 +1,113 @@
+.secondContainer {
+    margin: 40px auto; /* Combined from both rules */
+    height: 250px;
+    width: 90vw;
+    border-radius: 10px;
+    position: relative;
+}
+
+.secondContainer i {
+    height: 50px;
+    width: 50px;
+    background: rgb(252, 252, 251);
+    color: rgb(77, 75, 75);
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.25rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    z-index: 20;
+    transition: all 0.3s ease; /* Added from the second rule */
+}
+
+.arow{
+  margin: auto;
+  margin-top: 10px;
+  height:30px;
+  width:30px;
+  color: #3c3b3b;
+}
+
+.secondContainer i:hover {
+    background: #f0f0f0;
+    color: #000;
+    transform: translateY(-50%) scale(1.1); /* Added from the second rule */
+}
+
+.secondContainer i:first-child {
+    left: -22px;
+}
+
+.secondContainer i:last-child {
+    right: -22px;
+}
+
+.secondContainer .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+/* Hides the scrollbar */
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel :where(.card, .img) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+    cursor: grab;
+}
+
+.carousel .card {
+    scroll-snap-align: start;
+    height: 250px;
+    width: 100%;
+    list-style: none;
+    border-radius: 8px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 900px) {
+    .secondContainer .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .secondContainer .carousel {
+        grid-auto-columns: 100%;
+    }
+}
