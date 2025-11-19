@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import "./Carousel.css"; // assuming your CSS is saved here
+import "./SecondContainer.css"; // assuming your CSS is saved here
 const Carousel = () => {
    const carouselRef = useRef(null);
 

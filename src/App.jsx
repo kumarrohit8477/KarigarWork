@@ -1,10 +1,11 @@
 import React from "react";
 import { Routes, Route ,useLocation} from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
-import SecondContainer from "./components/SecondContainer";
+import FirstContainer from "./components/FirstContainer/FirstContainer";
+import SecondContainer from "./components/SecondContainer/SecondContainer";
 import MostBookingSerives from "./components/MostBooking/MostBookingSerives";
 import ServicesContainer from "./components/ServiceContainer/ServicesContainer";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 import Login from "./pages/Loginpg";
 import Cart from "./pages/Cart";
 import ServiceType from "./components/ServiceType/ServiceType"; // service detail page
@@ -21,6 +22,7 @@ function App() {
           path="/"
           element={
             <>
+            <FirstContainer/>
               <SecondContainer />
               <MostBookingSerives />
               <ServicesContainer />
