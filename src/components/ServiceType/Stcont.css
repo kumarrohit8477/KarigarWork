@@ -12,9 +12,6 @@
    --radius: 12px;
 }
 
-
-
-
 .lbox {
    width: var(--box-width);
    background: linear-gradient(160deg, #d75454, #da8181);

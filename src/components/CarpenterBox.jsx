@@ -19,4 +19,4 @@ const CarpenterBox = () => {
   )
 }
 
-export default CarpenterBox
+export default CarpenterBox;

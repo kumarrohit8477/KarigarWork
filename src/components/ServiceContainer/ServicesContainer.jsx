@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ServiceName from './ServiceName';
 import './ServicesContainer.css';
 const ServicesContainer = () => {
@@ -8,8 +9,13 @@ const ServicesContainer = () => {
       <div className="conFirst">
         <div className="srvcs">Home improvement services</div>
         <div className="servicesGrid">
-          <ServiceName name="Carpenter" image="src/assets/images/carpenter.png" />
+          <Link to="/Carpenter">
+            <ServiceName name="Carpenter" image="src/assets/images/carpenter.png" />
+          </Link>
+          <Link to="/Plumber">
           <ServiceName name="Plumber" image="src/assets/images/plumber.png" />
+          </Link>
+          
           <ServiceName name="Electrician" image="src/assets/images/electrician.png" />
           <ServiceName name="Painting & Waterproofing" image="src/assets/images/painter.png" />
           <ServiceName name="Mason" image="src/assets/images/mason.png" />
@@ -27,7 +33,7 @@ const ServicesContainer = () => {
           <ServiceName name="Microwave repair" image="src/assets/images/microwave.png" />
         </div>
       </div>
-      
+
       <div className="conFirst">
         <div className="srvcs">Cleaning & Pest control</div>
         <div className="servicesGrid">
