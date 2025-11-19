@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import "./SecondContainer.css"; // assuming your CSS is saved here
-const Carousel = () => {
+const SecondContainer = () => {
    const carouselRef = useRef(null);
 
    const scroll = (direction) => {
@@ -50,4 +50,4 @@ const Carousel = () => {
    );
 };
 
-export default Carousel;
+export default SecondContainer;

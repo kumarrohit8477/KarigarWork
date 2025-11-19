@@ -1,101 +1,128 @@
-.firstContainer {
-  height: calc(100vh - 100px);
-  width: 90vw;
+/* HERO SECTION WITH BACKGROUND */
+.hero {
+  height: calc(100vh - 90px);
+  width: 100%;
+  background-image: url("https://i.ibb.co/7k6qF0T/home-services.jpg");
+  background-size: cover;
+  background-position: center;
   display: flex;
-  justify-content: space-between;
-  margin: auto; /* I added this to help center it */
-}
-
-.lfirstContainer {
-  height: calc(100vh - 100px);
-  width: 47%;
-  padding-left: 50px;
-  background: #fffdfd;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.upbox {
-  width: 490px;
-  margin-top: 40px;
-  display: flex;
-  font-size: 50px;
-  font-weight: bold; /* Added for emphasis */
-  color: #222; /* Added for clarity */
-}
-
-/* You can still use ID selectors, but it's often
-  better to use classes with CSS Modules.
-  I'll leave this as-is since your JSX uses it.
-*/
-#midboxpara {
-  width: 490px;
-  font-size: 30px;
-  margin-bottom: 1rem; /* Added margin */
-}
-
-.midbox {
-  height: 350px;
-  width: 490px;
-  padding: 20px;
-  background-color: whitesmoke;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  border-radius: 12px; /* Added rounded corners */
+  padding-left: 80px;
+  color: white;
+  position: relative;
 }
 
+/* DARK OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* LEFT SIDE CONTENT */
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 500px;
+}
+
+.titlle {
+  font-size: 100px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.tagline {
+  font-size: 45px;
+  opacity: 0.9;
+  margin-bottom: 25px;
+}
+
+.cta-btn {
+  background: #3ec7d6;
+  padding: 14px 30px;
+  border-radius: 12px;
+  color: black;
+  font-weight: 700;
+  font-size: 20px;
+  display: inline-block;
+}
+
+/* RIGHT SIDE CONTAINER (PERFECTLY CENTERED VERTICALLY) */
+.rContainer {
+  position: absolute;
+  top: 50%;
+  right: 100px;
+  transform: translateY(-50%);
+  width: 30vw;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  z-index: 3;
+}
+
+/* MID BOX */
+.midbox {
+  background: white;
+  color: black;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+#midboxpara {
+  width: 100%;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/* SERVICE ICON BLOCK */
 .midboxicons {
-  margin: auto;
-  height: 120px;
-  width: 140px;
-  border-radius: 10px;
-  background: #efeeee;
-  cursor: pointer;
-  transition: 0.3s;
+  height: 110px;
+  width: 110px;
+  background: #f6f6f6;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-weight: 500; /* Added font weight */
-  color: #333; /* Added text color */
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
-/* This nested selector works perfectly in CSS Modules! */
-.midbox .midboxicons .mbii {
-  width: 60%;
-  margin-bottom: 8px; /* Added spacing */
-}
-
-/* So do pseudo-selectors like :hover */
 .midboxicons:hover {
-  background: #e0dfdf;
-  transform: scale(1.05);
+  transform: scale(1.06);
+  background: #e8e8e8;
 }
 
+.mbii {
+  width: 60%;
+  margin-bottom: 6px;
+}
+
+/* BOTTOM STAT BOX */
 .botbox {
-  width: 490px;
+  margin-top: 20px;
   display: flex;
+  gap: 15px;
   justify-content: space-between;
-  margin-bottom: 2rem; /* Added margin */
 }
 
 .sbotbox {
+  background: white;
   height: 100px;
-  width: 244px;
-  padding: 15px;
-  background-color: whitesmoke;
+  width: 180px;
+  border-radius: 12px;
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
-  border-radius: 12px; /* Added rounded corners */
-}
-
-.sbottext {
-  font-size: 15px;
-  line-height: 1.4; /* Added line height */
+  gap: 10px;
+  padding: 10px;
 }
 
 .sbotimg {
@@ -103,47 +130,31 @@
   width: 40px;
 }
 
-.rfirstContainer {
-  height: calc(100vh - 100px);
-  width: 53%;
-  background: #efeeee;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.sbottext {
+  font-size: 14px;
 }
 
-#slider {
-  border-radius: 10px;
-}
-
-/* Media queries also work perfectly */
-@media screen and (max-width: 768px) {
-  .firstContainer {
+/* RESPONSIVE DESIGN */
+@media (max-width: 820px) {
+  .hero {
     flex-direction: column;
-    width: 100vw; /* Use full width on mobile */
-    height: auto;
+    padding-left: 20px;
   }
 
-  .lfirstContainer,
-  .rfirstContainer {
-    width: 100%;
-    height: auto;
-    padding: 20px; /* Add padding for mobile */
+  .rContainer {
+    position: relative;
+    transform: none;
+    top: auto;
+    right: auto;
+    width: 90%;
+    margin-top: 20px;
   }
 
-  .upbox,
-  #midboxpara,
-  .midbox,
-  .botbox {
-    width: 100%; /* Make elements full-width */
+  .title {
+    font-size: 48px;
   }
 
-  .rfirstContainer {
-    padding: 0;
-  }
-
-  #slider {
-    width: 100%;
-    border-radius: 0;
+  .tagline {
+    font-size: 22px;
   }
 }
