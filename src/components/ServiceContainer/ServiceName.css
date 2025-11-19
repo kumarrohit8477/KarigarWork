@@ -10,7 +10,6 @@
   flex-direction: column;
   justify-content: space-between;
   border: 1px solid rgb(96, 92, 92);
-  background-color: rgb(235, 255, 248);
 }
 
 .Containerbox:hover {
