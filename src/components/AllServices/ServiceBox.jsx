@@ -1,13 +1,28 @@
 import React from 'react'
-import "./ServiceBox.css";
+import './ServiceBox.css'
 
 const ServiceBox = ({ serviceName, items }) => {
+
+  const scrollToSection = (name) => {
+    const id = name.toLowerCase() + "-section";
+    const section = document.getElementById(id);
+
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
-    <div className="lbox">
-      <div className="sName">{serviceName}</div>
-      <div className="libox">
+    <div className="service-container">
+      <h2>{serviceName}</h2>
+
+      <div className="items-row">
         {items.map((item, index) => (
-          <div key={index} className="boxes">
+          <div
+            key={index}
+            className="item-box"
+            onClick={() => scrollToSection(item)}
+          >
             {item}
           </div>
         ))}
@@ -15,4 +30,5 @@ const ServiceBox = ({ serviceName, items }) => {
     </div>
   );
 };
+
 export default ServiceBox;
