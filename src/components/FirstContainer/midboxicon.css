@@ -1,0 +1,72 @@
+.midboxicon {
+  height: 110px;
+  width: 110px;
+  background: #f6f6f6;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Hover Animation */
+.midboxicon:hover {
+  transform: translateY(-6px) scale(1.0001);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.18);
+  background: #fff;
+}
+
+/* Icon Image */
+.mbii {
+  width: 60%;
+  margin-bottom: 6px;
+}
+
+/* 🔥 Responsive Sizes */
+@media (max-width: 900px) {
+  .midboxicon {
+    height: 95px;
+    width: 95px;
+    font-size: 14px;
+  }
+  .mbii {
+    width: 55%;
+  }
+}
+
+@media (max-width: 700px) {
+  .midboxicon {
+    height: 85px;
+    width: 85px;
+    font-size: 13px;
+  }
+  .mbii {
+    width: 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  .midboxicon {
+    height: 75px;
+    width: 75px;
+    font-size: 12px;
+  }
+  .mbii {
+    width: 45%;
+  }
+}
+
+@media (max-width: 370px) {
+  .midboxicon {
+    height: 68px;
+    width: 68px;
+    font-size: 11px;
+  }
+  .mbii {
+    width: 40%;
+  }
+}

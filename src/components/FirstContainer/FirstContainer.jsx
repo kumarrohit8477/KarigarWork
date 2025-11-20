@@ -1,14 +1,17 @@
 import React from "react";
 import "./FirstContainer.css";
+import Midboxicon from "./midboxicon";
 
 const FirstContainer = () => {
    return (
       <div className="hero">
+
+         {/* DARK OVERLAY */}
          <div className="overlay"></div>
 
          {/* LEFT CONTENT */}
          <div className="content">
-            <h1 className="titlle">KarigarWork</h1>
+            <h1 className="tittle">KarigarWork</h1>
             <p className="tagline">Your Home Service Partner</p>
 
             <div className="cta-btn">
@@ -16,46 +19,23 @@ const FirstContainer = () => {
             </div>
          </div>
 
-         {/* RIGHT CONTENT BOX */}
+         {/* RIGHT BOX */}
          <div className="rContainer">
-
             <div className="midbox">
                <p id="midboxpara">What are you looking for?</p>
 
-               <div className="midboxicons">
-                  <img src="/assets/images/caricon.png" className="mbii" />
-                  Carpenter
-               </div>
+               <Midboxicon image="src/assets/icons/caricon.png" name="Carpenter"/>
+               <Midboxicon image="src/assets/icons/elecicon.png" name="Electrician"/>
+               <Midboxicon image="src/assets/icons/plumicon.png" name="Plumber"/>
+               <Midboxicon image="src/assets/icons/cleaningicon.png" name="Cleaning"/>
+               <Midboxicon image="src/assets/icons/acicon.png" name="AC Service"/>
+               <Midboxicon image="src/assets/icons/roicon.png" name="RO Service"/>
 
-               <div className="midboxicons">
-                  <img src="/assets/images/elecicon.png" className="mbii" />
-                  Electrician
-               </div>
-
-               <div className="midboxicons">
-                  <img src="/assets/images/plumicon.png" className="mbii" />
-                  Plumber
-               </div>
-
-               <div className="midboxicons">
-                  <img src="/assets/images/cleaningicon.png" className="mbii" />
-                  Cleaning
-               </div>
-
-               <div className="midboxicons">
-                  <img src="/assets/images/acicon.png" className="mbii" />
-                  AC Service
-               </div>
-
-               <div className="midboxicons">
-                  <img src="/assets/images/roicon.png" className="mbii" />
-                  RO Service
-               </div>
             </div>
 
             <div className="botbox">
                <div className="sbotbox">
-                  <img src="/assets/icons/rating.svg" className="sbotimg" />
+                  <img src="src/assets/icons/rating.svg" className="sbotimg" />
                   <div className="sbottext">
                      <div id="rating">4.8</div>
                      <div id="serviceRating">Service rating*</div>
@@ -63,14 +43,13 @@ const FirstContainer = () => {
                </div>
 
                <div className="sbotbox">
-                  <img src="/assets/icons/users.svg" className="sbotimg" />
+                  <img src="src/assets/icons/users.svg" className="sbotimg" />
                   <div className="sbottext">
                      <div id="globaluser">12M+</div>
                      <div id="customerGlobaly">Customers Globally*</div>
                   </div>
                </div>
             </div>
-
          </div>
       </div>
    );

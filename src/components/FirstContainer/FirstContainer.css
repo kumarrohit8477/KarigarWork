@@ -26,7 +26,7 @@
   max-width: 500px;
 }
 
-.titlle {
+.tittle {
   font-size: 100px;
   font-weight: 700;
   margin-bottom: 15px;
@@ -116,12 +116,13 @@
 .sbotbox {
   background: white;
   height: 100px;
-  width: 180px;
+  width: 200px;
   border-radius: 12px;
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 10px;
+  color: black;
 }
 
 .sbotimg {
@@ -155,5 +156,26 @@
 
   .tagline {
     font-size: 22px;
+  }
+}
+
+/* Responsive Grid */
+@media (max-width: 900px) {
+  .midbox {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .midbox {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .midbox {
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
   }
 }
