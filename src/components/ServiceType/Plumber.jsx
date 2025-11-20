@@ -18,7 +18,7 @@ const Plumber = () => {
       <ServiceBox serviceName="Plumber" items={Items} />
 
       <div className="box2">
-        <div className="nm">Bed</div>
+        <div id="tap fitting-section" className="nm">Tap Fitting</div>
         <div className='box3'>
           <CServices name="Normal Bed (with side tables)" rating="4.5" reviews="5K" price="10000 " duration="4 days" image="src/assets/images/bed1.png" />
           <CServices name="Normal Bed (with side tables)" rating="4.5" reviews="5K" price="10000 " duration="4 days" image="src/assets/images/bed1.png" />
