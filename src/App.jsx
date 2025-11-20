@@ -8,7 +8,8 @@ import ServicesContainer from "./components/ServiceContainer/ServicesContainer";
 import Footer from "./components/Footer/Footer";
 import Login from "./pages/Loginpg";
 import Cart from "./pages/Cart";
-import ServiceType from "./components/ServiceType/ServiceType"; // service detail page
+import Carpenter from "./components/ServiceType/Carpenter"; // service detail page
+import Plumber from "./components/ServiceType/Plumber"; // service detail page
 
 function App() {
   const location = useLocation();
@@ -32,8 +33,8 @@ function App() {
         />
         <Route path="/login" element={<Login />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/Carpenter" element={<ServiceType />} />
-        <Route path="/Plumber" element={<ServiceType />} />
+        <Route path="/Carpenter" element={<Carpenter />} />
+        <Route path="/Plumber" element={<Plumber />} />
       </Routes>
     </>
   );

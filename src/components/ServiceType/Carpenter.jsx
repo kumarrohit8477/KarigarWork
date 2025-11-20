@@ -2,8 +2,8 @@ import React from 'react'
 import CServices from './CSevices'
 import ServiceBox from '../AllServices/ServiceBox'
 import './Servicetype.css'
-const Stcont = ({ every }) => {
-  const carpenterItems = [
+const Carpenter = () => {
+  const Items = [
     "Bed",
     "Almirah",
     "Kitchen",
@@ -16,7 +16,7 @@ const Stcont = ({ every }) => {
   ];
   return (
     <>
-      <ServiceBox serviceName={every} items={carpenterItems} />
+      <ServiceBox serviceName="Carpenter" items={Items} />
 
       <div className="box2">
         <div className="nm">Bed</div>
@@ -37,4 +37,4 @@ const Stcont = ({ every }) => {
   )
 }
 
-export default Stcont
+export default Carpenter;
