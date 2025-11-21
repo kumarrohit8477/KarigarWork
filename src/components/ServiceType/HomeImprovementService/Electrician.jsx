@@ -1,9 +1,9 @@
-import React from "react";
-import CServices from "./CSevices";
-import ServiceBox from "../AllServices/ServiceBox";
-import "./Servicetype.css";
+import React from 'react'
+import CServices from "../CSevices";
+import ServiceBox from "../../AllServices/ServiceBox";
+import "../Servicetype.css";
 
-const Carpenter = () => {
+const Electrician = () => {
   const Items = [
     "Bed",
     "Almirah",
@@ -18,7 +18,7 @@ const Carpenter = () => {
 
   return (
     <>
-      <ServiceBox serviceName="Carpenter" items={Items} />
+      <ServiceBox serviceName="Electrician" items={Items} />
 
       <div className="box2">
         {/* BED */}
@@ -57,6 +57,6 @@ const Carpenter = () => {
       </div>
     </>
   );
-};
+}
 
-export default Carpenter;
+export default Electrician;

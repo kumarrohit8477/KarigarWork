@@ -9,19 +9,44 @@ const ServicesContainer = () => {
       <div className="conFirst">
         <div className="srvcs">Home improvement services</div>
         <div className="servicesGrid">
+
+
           <Link to="/Carpenter">
             <ServiceName name="Carpenter" image="src/assets/images/carpenter.png" />
           </Link>
+
+
           <Link to="/Plumber">
           <ServiceName name="Plumber" image="src/assets/images/plumber.png" />
           </Link>
-          
+
+
+          <Link to="/Electrician">
           <ServiceName name="Electrician" image="src/assets/images/electrician.png" />
+          </Link>
+
+          <Link to="/PaintingnWaterproofing">
           <ServiceName name="Painting & Waterproofing" image="src/assets/images/painter.png" />
-          <ServiceName name="Mason" image="src/assets/images/mason.png" />
-          <ServiceName name="Tile Setting" image="src/assets/images/tilesetter.png" />
-          <ServiceName name="Aluminium work" image="src/assets/images/cabinate.png" />
+          </Link>
+
+          <Link to="/Mason">
+              <ServiceName name="Mason" image="src/assets/images/mason.png" />
+          </Link>
+      
+          <Link to="/FlooringNTiling">
+           <ServiceName name="Flooring & Tiling" image="src/assets/images/tilesetter.png" />
+          </Link>
+         
+
+         <Link to="/Aluminiumwork">
+         <ServiceName name="Aluminium work" image="src/assets/images/cabinate.png" />
+         </Link>
+          
+
+          <Link to="/SteelNWelding">
           <ServiceName name="Steel & Welding work" image="src/assets/images/welding.png" />
+          </Link>
+          
         </div>
       </div>
       <div className="conFirst">

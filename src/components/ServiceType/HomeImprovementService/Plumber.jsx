@@ -1,6 +1,10 @@
 import React from 'react'
-import CServices from './CSevices'
-import ServiceBox from '../AllServices/ServiceBox'
+import CServices from "../CSevices";
+import ServiceBox from "../../AllServices/ServiceBox";
+import "../Servicetype.css";
+
+
+
 const Plumber = () => {
   const Items = [
     "Tap Fitting",
