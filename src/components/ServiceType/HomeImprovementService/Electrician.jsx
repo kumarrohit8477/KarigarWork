@@ -5,16 +5,17 @@ import "../Servicetype.css";
 
 const Electrician = () => {
   const Items = [
-    "Bed",
-    "Almirah",
-    "Kitchen",
-    "Doors",
-    "Tables",
-    "Chairs",
-    "Windows",
-    "Shelves",
-    "Cabinets",
-  ];
+  "Switch & socket",
+  "Wall & Ceiling light",
+  "Fan",
+  "Wiring",
+  "Socket replacement",
+  "MCB",
+  "Bell",
+  "Appliance",
+  "Book a consultation",
+];
+
 
   return (
     <>
