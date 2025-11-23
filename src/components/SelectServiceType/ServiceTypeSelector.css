@@ -1,0 +1,41 @@
+.service-selector-container {
+  padding: 40px;
+  width: 40vw;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #ffebeb;
+  border-radius: 10px;
+  border: 5px groove rgb(238, 244, 250);
+}
+
+.selector-title {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.options-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.option-box {
+  flex: 1;
+  padding: 18px 10px;
+  background: #87ae56;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.option-box:hover {
+  
+}
+
+.option-box.active {
+  background: #cc0f0f;
+  border-color: #11577a;
+  font-weight: bold;
+}

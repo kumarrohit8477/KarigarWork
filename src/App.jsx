@@ -16,6 +16,7 @@ import Aluminiumwork from "./components/ServiceType/HomeImprovementService/Alumi
 import FlooringNTiling from "./components/ServiceType/HomeImprovementService/FlooringNTiling"; 
 import PaintingnWaterproofing from "./components/ServiceType/HomeImprovementService/PaintingnWaterproofing";
 import SteelNWelding from "./components/ServiceType/HomeImprovementService/SteelNWelding";
+import ServiceTypeSelector from "./components/SelectServiceType/ServiceTypeSelector";
 
 function App() {
   const location = useLocation();
@@ -34,6 +35,7 @@ function App() {
               <MostBookingSerives />
               <ServicesContainer />
               <Footer />
+             
             </>
           }
         />
