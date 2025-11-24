@@ -4,7 +4,7 @@ import ServiceBox from "../../AllServices/ServiceBox";
 import "../Servicetype.css";
 
 
-const Carpenter = () => {
+const Carpnew = () => {
   const Items = [
     "Bed",
     "Almirah",
@@ -60,4 +60,4 @@ const Carpenter = () => {
   );
 };
 
-export default Carpenter;
+export default Carpnew;

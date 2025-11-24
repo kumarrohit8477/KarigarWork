@@ -1,3 +1,11 @@
+body{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .service-selector-container {
   padding: 40px;
   width: 40vw;
@@ -22,20 +30,16 @@
 .option-box {
   flex: 1;
   padding: 18px 10px;
-  background: #87ae56;
   border-radius: 10px;
-  border: 2px solid transparent;
+  border: 2px solid black;
   cursor: pointer;
   font-size: 18px;
   transition: 0.3s;
 }
 
-.option-box:hover {
-  
-}
 
 .option-box.active {
-  background: #cc0f0f;
+  background: #684040a9;
   border-color: #11577a;
   font-weight: bold;
 }

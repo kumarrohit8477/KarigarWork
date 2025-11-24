@@ -19,3 +19,7 @@ body {
   font-size: 28px;
   font-weight: 700;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}

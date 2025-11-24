@@ -82,7 +82,7 @@ ul li {
 }
 
 /* ====== BUTTON ====== */
-button {
+button.btnn {
   padding: 8px 16px;
   height: 40px;
   width: 90px;
@@ -97,7 +97,7 @@ button {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-button:hover {
+.btnn:hover {
   background-color: #8a2e78;
   transform: translateY(-2px);
 }

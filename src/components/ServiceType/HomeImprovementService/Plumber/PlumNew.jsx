@@ -2,12 +2,7 @@ import React from 'react'
 import CServices from "../CSevices";
 import ServiceBox from "../../AllServices/ServiceBox";
 import "../Servicetype.css";
-
-
-
-
-
-const Plumber = () => {
+const PlumNew = () => {
   const Items = [
     "Tap Fitting",
     "Almirah",
@@ -42,4 +37,4 @@ const Plumber = () => {
   )
 }
 
-export default Plumber;
+export default PlumNew;

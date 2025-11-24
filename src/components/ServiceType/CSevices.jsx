@@ -17,7 +17,7 @@ const CServices = ({ name, rating, reviews, price, duration, image }) => {
       </div>
       <div className="item">
         <img src={image} alt={name} />
-        <button>Add</button>
+        <button className='btnn'>Add</button>
       </div>
     </div>
   );
