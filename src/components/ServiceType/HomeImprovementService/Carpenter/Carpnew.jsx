@@ -1,5 +1,5 @@
 import React from "react";
-import CServices from "../CSevices";
+import CServices from "../../AllServices/CServices";
 import ServiceBox from "../../AllServices/ServiceBox";
 import "../Servicetype.css";
 
