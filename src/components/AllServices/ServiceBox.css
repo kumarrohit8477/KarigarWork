@@ -1,17 +1,10 @@
-/* ServiceBox.css */
-
 .service-container {
-  /* Layout */
   display: flex;
   flex-direction: column;
-  
-  /* Sizing & Spacing */
   width: 25vw;
   max-width: 800px; /* Prevents it from getting too wide on huge screens */
   margin: 40px auto; /* Centers the container */
   padding: 20px;
-  
-  /* Visuals */
   background-color: #d0b9b9;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -29,37 +22,25 @@
 }
 
 .items-row {
-  /* The Magic: Creates a responsive grid */
   display: grid;
-  /* Columns will be at least 100px, but stretch to fill space */
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   gap: 15px; /* Space between boxes */
 }
 
 .item-box {
-  /* Content Alignment */
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  
-  /* Sizing */
   height: 100px;
-  /* Width is handled by the grid, no need to set it here */
-  
-  /* Visuals */
   background-color: #f9f9f9;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   cursor: pointer;
   color: #555;
   font-weight: 500;
-  
-  /* Smooth Animation */
   transition: all 0.3s ease;
 }
-
-/* Hover Effects */
 .item-box:hover {
   background-color: #fff;
   border-color: #9c4f4f; /* Using your original theme color for accent */

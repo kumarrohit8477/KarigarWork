@@ -1,8 +1,7 @@
 import React from "react";
-import CServices from "../../AllServices/CServices";
-import ServiceBox from "../../AllServices/ServiceBox";
-import "../Servicetype.css";
-
+import CServices from "../../CSevices"; 
+import ServiceBox from "../../../AllServices/ServiceBox";
+import "../../Servicetype.css";
 
 const Carpnew = () => {
   const Items = [
@@ -33,7 +32,7 @@ const Carpnew = () => {
               reviews="5K"
               price="10000"
               duration="4 days"
-              image="src/assets/images/bed1.png"
+              image="/src/assets/images/bed1.png" 
             />
           ))}
         </div>
@@ -49,12 +48,10 @@ const Carpnew = () => {
               reviews="2K"
               price="15000"
               duration="5 days"
-              image="src/assets/images/bed1.png"
+              image="/src/assets/images/bed1.png"
             />
           ))}
         </div>
-
-        {/* Add more sections similarly */}
       </div>
     </>
   );

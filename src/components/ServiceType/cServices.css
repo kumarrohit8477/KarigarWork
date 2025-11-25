@@ -82,7 +82,7 @@ ul li {
 }
 
 /* ====== BUTTON ====== */
-button.btnn {
+.btnn {
   padding: 8px 16px;
   height: 40px;
   width: 90px;
@@ -102,8 +102,4 @@ button.btnn {
   transform: translateY(-2px);
 }
 
-/* ====== GLOBAL TEXT RESET ====== */
-p {
-  margin: 0;
-  padding: 0;
-}
+

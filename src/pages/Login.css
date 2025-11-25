@@ -6,11 +6,6 @@
    --white: #fff;
    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
-
-body {
-   padding-top: 85px;
-}
-
 .rethome {
    height: 40px;
    width: 40px;

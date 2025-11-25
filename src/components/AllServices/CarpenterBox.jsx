@@ -1,6 +1,5 @@
 import React from 'react'
 import ServiceBox from './ServiceBox';
-
 const CarpenterBox = () => {
   const carpenterItems = [
     "Bed",
