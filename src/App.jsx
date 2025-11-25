@@ -17,6 +17,14 @@ import PaintingnWaterproofing from "./components/ServiceType/HomeImprovementServ
 import SteelNWelding from "./components/ServiceType/HomeImprovementService/SteelNWelding";
 import Carpnew from "./components/ServiceType/HomeImprovementService/Carpenter/Carpnew";
 import Carprep from "./components/ServiceType/HomeImprovementService/Carpenter/Carprep";
+import PlumNew from "./components/ServiceType/HomeImprovementService/Plumber/PlumNew";
+import Acservice from "./components/ServiceType/AppliancesServices/Acservice";
+import Microwave from "./components/ServiceType/AppliancesServices/Microwave";
+import Refrigerator from "./components/ServiceType/AppliancesServices/Refrigerator";
+import Washingmachine from "./components/ServiceType/AppliancesServices/Washingmachine";
+import BathroomNkitchen from "./components/ServiceType/CleaningNpest/BathroomNkitchen";
+import Pestcontrol from "./components/ServiceType/CleaningNpest/Pestcontrol";
+import SofaNcarpet from "./components/ServiceType/CleaningNpest/SofaNcarpet";
 function App() {
   const location = useLocation();
   const hideNavbar =
@@ -49,6 +57,14 @@ function App() {
         <Route path="/" element={<ServiceTypeSelector />} />
         <Route path="/Carpenter/Carpnew" element={<Carpnew />} />
         <Route path="/Carpenter/Carprep" element={<Carprep />} />
+        <Route path="/Plumber" element={<PlumNew />} />
+        <Route path="/Acservice" element={<Acservice/>} />
+        <Route path="/Microwave" element={<Microwave/>} />
+        <Route path="/Refrigerator" element={<Refrigerator/>} />
+        <Route path="/Washingmachine" element={<Washingmachine/>} />
+        <Route path="/BathroomNkitchen" element={<BathroomNkitchen/>} />
+        <Route path="/Pestcontrol" element={<Pestcontrol/>} />
+        <Route path="/SofaNcarpet" element={<SofaNcarpet/>} />
       </Routes>
     </>
   );

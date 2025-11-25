@@ -17,8 +17,7 @@ const PlumNew = () => {
   ];
   return (
     <>
-      <ServiceBox serviceName="Plumber" items={Items} />
-
+      <ServiceBox serviceName="Plumber" items={Items}/>
       <div className="box2">
         <div id="tap fitting-section" className="nm">Tap Fitting</div>
         <div className='box3'>

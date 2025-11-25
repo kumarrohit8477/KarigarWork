@@ -1,7 +1,5 @@
-import React from "react";
 import CServices from "../../CSevices"; 
 import ServiceBox from "../../../AllServices/ServiceBox";
-import "../../Servicetype.css";
 
 const Carpnew = () => {
   const Items = [
