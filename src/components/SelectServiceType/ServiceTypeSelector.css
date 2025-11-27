@@ -1,37 +1,86 @@
+.hggt {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* Main Container */
 .service-selector-container {
   padding: 40px;
   width: 40vw;
+  max-width: 500px;
+  min-width: 300px;
   text-align: center;
-  font-family: Arial, sans-serif;
-  background-color: #ffebeb;
-  border-radius: 10px;
-  border: 5px groove rgb(238, 244, 250);
+  font-family: "Segoe UI", Arial, sans-serif;
+ 
+  border-radius: 14px;
+  border: 2px solid #e3e3e3;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
 }
 
+.service-selector-container:hover {
+  transform: translateY(-4px);
+}
+
+/* Title */
 .selector-title {
-  font-size: 22px;
-  margin-bottom: 15px;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 600;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ddd;
 }
 
+/* Options Row */
 .options-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 15px;
 }
 
+/* Option Box */
 .option-box {
-  flex: 1;
+  width: 180px;
   padding: 18px 10px;
-  border-radius: 10px;
-  border: 2px solid black;
+  border-radius: 12px;
+  border: 2px solid #c2c2c2;
   cursor: pointer;
   font-size: 18px;
-  transition: 0.3s;
+  background: #fafafa;
+  transition: all 0.3s ease;
 }
 
+.option-box:hover {
+  background: #f0f6ff;
+  border-color: #4a90e2;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transform: scale(1.03);
+}
 
+/* Active State */
 .option-box.active {
-  background: #684040a9;
-  border-color: #11577a;
-  font-weight: bold;
+  background: #e3efff;
+  border-color: #1e6bb8;
+  font-weight: 600;
+  color: #1e3a5f;
+  box-shadow: 0 6px 15px rgba(30, 107, 184, 0.25);
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-selector-container {
+    width: 80vw;
+  }
+
+  .option-box {
+    width: 100%;
+  }
 }
