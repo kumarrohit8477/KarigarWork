@@ -41,9 +41,9 @@ const ServicesContainer = () => {
         <div className="srvcs">Cleaning & Pest control</div>
         <div className="servicesGrid">
 
-          <Link to="/BathroomKitchenCleaning"><ServiceName name="Bathroom & Kitchen Cleaning" image="src/assets/images/bathroom.png" /></Link>
-          <Link to="/SofaCarpetCleaning"><ServiceName name="Sofa & Carpet Cleaning" image="src/assets/images/sofa.png" /></Link>
-          <Link to="/WaterTankCleaning"><ServiceName name="Water tank Cleaning" image="src/assets/images/wtc.jpg" /></Link>
+          <Link to="/Bathroom&kitchen"><ServiceName name="Bathroom & Kitchen Cleaning" image="src/assets/images/bathroom.png" /></Link>
+          <Link to="/SofaNcarpet"><ServiceName name="Sofa & Carpet Cleaning" image="src/assets/images/sofa.png" /></Link>
+          <Link to="/Watertank"><ServiceName name="Water tank Cleaning" image="src/assets/images/wtc.jpg" /></Link>
           <Link to="/PestControl"><ServiceName name="Pest control" image="src/assets/images/pc.jpg" /></Link>
 
         </div>

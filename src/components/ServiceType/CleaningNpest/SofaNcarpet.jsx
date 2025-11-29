@@ -15,7 +15,7 @@ const SofaNcarpet = () => {
 
   return (
     <>
-      <ServiceBox serviceName="Sofa & Carpet" items={Items} />
+      <ServiceBox serviceName="Sofa & Carpet Cleaning" items={Items} />
 
       <div className="box2">
         {/* BED */}
