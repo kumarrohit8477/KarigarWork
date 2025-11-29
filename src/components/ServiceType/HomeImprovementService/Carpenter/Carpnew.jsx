@@ -30,13 +30,45 @@ const Carpnew = () => {
               reviews="5K"
               price="10000"
               duration="4 days"
+              image="" alt="Bed" 
+            />
+          ))}
+        </div>
+
+        {/* BED */}
+        <div id="almirah-section" className="nm">Almirah</div>
+        <div className="box3">
+          {[...Array(10)].map((_, i) => (
+            <CServices
+              key={i}
+              name="Normal Bed (with side tables)"
+              rating="4.5"
+              reviews="5K"
+              price="10000"
+              duration="4 days"
               image="/src/assets/images/bed1.png" 
             />
           ))}
         </div>
 
-        {/* KITCHEN */}
+        {/* BED */}
         <div id="kitchen-section" className="nm">Kitchen</div>
+        <div className="box3">
+          {[...Array(10)].map((_, i) => (
+            <CServices
+              key={i}
+              name="Normal Bed (with side tables)"
+              rating="4.5"
+              reviews="5K"
+              price="10000"
+              duration="4 days"
+              image="/src/assets/images/bed1.png" 
+            />
+          ))}
+        </div>
+        
+        {/* KITCHEN */}
+        <div id="doors-section" className="nm">Doors</div>
         <div className="box3">
           {[...Array(10)].map((_, i) => (
             <CServices

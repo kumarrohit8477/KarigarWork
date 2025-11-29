@@ -16,6 +16,7 @@
   margin-top: 40px;
   background: rgb(191, 170, 245);
   padding: 30px;
+  padding-top: 0.1px;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   width: 60vw;

@@ -8,8 +8,15 @@ const ServiceBox = ({ serviceName, items }) => {
     const section = document.getElementById(id);
 
     if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
+      const yOffset = -170; // height of your navbar
+      const y =
+        section.getBoundingClientRect().top +
+        window.pageYOffset +
+        yOffset;
+
+      window.scrollTo({ top: y, behavior: 'smooth' });
     }
+
   };
 
   return (
