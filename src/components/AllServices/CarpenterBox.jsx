@@ -10,7 +10,7 @@ const CarpenterBox = () => {
     "Chairs",
     "Windows",
     "Shelves",
-    "Cabinets",
+    "Book a Consultation",
   ];
   return (<div style={{ display: "flex", justifyContent: "center", padding: "30px" }}>
     <ServiceBox serviceName="Carpenter" items={carpenterItems} />

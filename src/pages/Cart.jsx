@@ -1,56 +1,31 @@
 import React from "react";
 import "./Cart.css";
 import { useNavigate } from "react-router-dom";
+import counterContext from "../context/context";
+import Cartin from "./Cartin";
 const Cart = () => {
    const navigate = useNavigate();
    const goHome = () => {
       navigate("/");
    };
+   const count = React.useContext(counterContext);
+   const total = 1097;
    return (
       <>
          <button onClick={goHome} className="rethome">X</button>
          <div className="cart-container">
             {/* --- Header --- */}
             <header className="cart-header">
-
-               <h1 className="page-title ttl">My Cart (2 items)</h1>
+               <h1 className="page-title ttl">My Cart ({count} items)</h1>
             </header>
 
             {/* --- Main Content --- */}
             <div className="cart-content">
                {/* Service Items */}
                <section className="service-items">
-                  <div className="cart-item">
-                     <div className="item-details">
-                        <p className="item-name">Intense Bathroom Cleaning</p>
-                        <p className="item-meta">4.8 (8k+ bookings)</p>
-                        <div className="item-actions">
-                           <button className="btn-remove">Remove</button>
-                           <div className="quantity-control">
-                              <button className="qty-btn">-</button>
-                              <span className="qty-count">1</span>
-                              <button className="qty-btn">+</button>
-                           </div>
-                        </div>
-                     </div>
-                     <p className="item-price">₹ 999</p>
-                  </div>
-
-                  <div className="cart-item">
-                     <div className="item-details">
-                        <p className="item-name">Haircut for Men</p>
-                        <p className="item-meta">4.9 (15k+ bookings)</p>
-                        <div className="item-actions">
-                           <button className="btn-remove">Remove</button>
-                           <div className="quantity-control">
-                              <button className="qty-btn">-</button>
-                              <span className="qty-count">1</span>
-                              <button className="qty-btn">+</button>
-                           </div>
-                        </div>
-                     </div>
-                     <p className="item-price">₹ 259</p>
-                  </div>
+                  <Cartin />
+                  <Cartin />
+                  <Cartin />
                </section>
 
                <hr className="section-divider" />
@@ -101,7 +76,7 @@ const Cart = () => {
                   </div>
                   <div className="bill-row total-row">
                      <span>Grand Total</span>
-                     <span className="total-price">₹ 1097</span>
+                     <span className="total-price">₹ {total}</span>
                   </div>
                </section>
             </div>
@@ -109,7 +84,7 @@ const Cart = () => {
             {/* --- Sticky Footer --- */}
             <footer className="sticky-footer">
                <div className="total-display">
-                  <p className="total-text">₹ 1097</p>
+                  <p className="total-text">₹ {total}</p>
                   <p className="view-details">View Details</p>
                </div>
                <button className="btn primary-btn checkout-btn">

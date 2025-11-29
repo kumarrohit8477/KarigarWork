@@ -3,6 +3,15 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+
+
+  
+  const [name, setname] = React.useState("Karigar Search");
+
+
+  const handleChange = (e) => {
+    setname(e.target.value);
+  }
   return (
     <>
       <div className="nav">
@@ -10,7 +19,7 @@ const Navbar = () => {
 
         <div className="search inpt">
           <img src="src/assets/icons/search.svg" alt="Search Icon" className="icn" />
-          <input placeholder="Karigar Search" type="text" className="loc" />
+          <input type="text"  value={name} onChange={handleChange} className="loc" />
         </div>
 
         <div className="location inpt">

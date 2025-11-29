@@ -11,7 +11,7 @@ const Carpnew = () => {
     "Chairs",
     "Windows",
     "Shelves",
-    "Cabinets",
+    "Book a Consultation",
   ];
 
   return (

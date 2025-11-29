@@ -70,72 +70,7 @@ box-shadow: var(--shadow);
 }
 
 /* --- Cart Items --- */
-.cart-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 15px 0;
-  border-bottom: 1px dashed var(--border-color);
-}
 
-.item-details {
-  flex-grow: 1;
-}
-
-.item-name {
-  font-weight: 600;
-  color: var(--text-color);
-}
-
-.item-meta {
-  font-size: 12px;
-  color: var(--light-text);
-  margin-bottom: 10px;
-}
-
-.item-price {
-  font-weight: 700;
-  font-size: 16px;
-  margin-left: 15px;
-}
-
-/* --- Actions --- */
-.item-actions {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.btn-remove {
-  background: none;
-  border: none;
-  color: #ff4d4d;
-  font-size: 12px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.quantity-control {
-  display: flex;
-  align-items: center;
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-}
-
-.qty-btn {
-  background: #f0f0f0;
-  border: none;
-  color: var(--text-color);
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-.qty-count {
-  padding: 0 10px;
-  font-weight: 600;
-}
 
 /* --- Schedule Section --- */
 .schedule-section > div {

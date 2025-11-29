@@ -15,7 +15,6 @@ const ServiceBox = ({ serviceName, items }) => {
   return (
     <div className="service-container">
       <h2>{serviceName}</h2>
-
       <div className="items-row">
         {items.map((item, index) => (
           <div

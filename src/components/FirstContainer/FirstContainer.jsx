@@ -29,7 +29,7 @@ const FirstContainer = () => {
                <Midboxicon image="src/assets/icons/plumicon.png" name="Plumber"/>
                <Midboxicon image="src/assets/icons/cleaningicon.png" name="Cleaning"/>
                <Midboxicon image="src/assets/icons/acicon.png" name="AC Service"/>
-               <Midboxicon image="src/assets/icons/roicon.png" name="RO Service"/>
+               <Midboxicon image="src/assets/icons/roicon.png" name="Book a Consultation"/>
 
             </div>
 
