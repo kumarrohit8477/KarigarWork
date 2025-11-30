@@ -22,23 +22,23 @@ const SecondContainer = () => {
 
          <ul className="carousel" ref={carouselRef}>
             <li className="card">
-               <img src="/assets/images/ryf.png" draggable="false" className="img" />
+               <img src="src/assets/images/ryf.png" draggable="false" className="img" />
             
             </li>
             <li className="card">
-                <img src="/assets/images/sybd.png" draggable="false" className="img" />
+                <img src="src/assets/images/sybd.png" draggable="false" className="img" />
             </li>
             <li className="card">
-                <img src="/assets/images/acs.png" draggable="false" className="img" />
+                <img src="src/assets/images/acs.png" draggable="false" className="img" />
             </li>
             <li className="card">
-                <img src="/assets/images/roi.png" draggable="false" className="img" />
+                <img src="src/assets/images/roi.png" draggable="false" className="img" />
             </li>
             <li className="card">
-                <img src="/assets/images/ikc.png" draggable="false" className="img" />
+                <img src="src/assets/images/ikc.png" draggable="false" className="img" />
             </li>
             <li className="card">
-                <img src="/assets/images/ryf.png" draggable="false" className="img" />
+                <img src="src/assets/images/ryf.png" draggable="false" className="img" />
             </li>
          </ul>
 
