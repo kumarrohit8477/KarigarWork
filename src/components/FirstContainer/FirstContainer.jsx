@@ -23,13 +23,12 @@ const FirstContainer = () => {
          <div className="rContainer">
             <div className="midbox">
                <p id="midboxpara">What are you looking for?</p>
-
-               <Midboxicon image="src/assets/icons/caricon.png" name="Carpenter"/>
-               <Midboxicon image="src/assets/icons/elecicon.png" name="Electrician"/>
-               <Midboxicon image="src/assets/icons/plumicon.png" name="Plumber"/>
-               <Midboxicon image="src/assets/icons/cleaningicon.png" name="Cleaning"/>
-               <Midboxicon image="src/assets/icons/acicon.png" name="AC Service"/>
-               <Midboxicon image="src/assets/icons/roicon.png" name="Book a Consultation"/>
+               <Midboxicon image="/assets/icons/caricon.png" name="Carpenter"/>
+               <Midboxicon image="/assets/icons/elecicon.png" name="Electrician"/>
+               <Midboxicon image="/assets/icons/plumicon.png" name="Plumber"/>
+               <Midboxicon image="/assets/icons/cleaningicon.png" name="Cleaning"/>
+               <Midboxicon image="/assets/icons/acicon.png" name="AC Service"/>
+               <Midboxicon image="/assets/icons/roicon.png" name="Book a Consultation"/>
 
             </div>
 

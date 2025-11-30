@@ -1,7 +1,7 @@
 import CServices from "../CSevices"; 
 import ServiceBox from "../../AllServices/ServiceBox";
 import React from "react";
-import bed1 from "../../../assets/images/bed1.png";
+
 const Pestcontrol = () => {
   const Items = [
     "Bed",
@@ -31,7 +31,7 @@ const Pestcontrol = () => {
               reviews="5K"
               price="10000"
               duration="4 days"
-               image={bed1}
+            
             />
           ))}
         </div>
@@ -47,7 +47,7 @@ const Pestcontrol = () => {
               reviews="2K"
               price="15000"
               duration="5 days"
-              image={bed1}
+         
             />
           ))}
         </div>
