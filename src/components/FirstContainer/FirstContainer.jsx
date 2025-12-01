@@ -25,7 +25,7 @@ const FirstContainer = () => {
             <div className="midbox">
                <p id="midboxpara">What are you looking for?</p>
                <Midboxicon image={caricon} name="Carpenter"/>
-               <Midboxicon image="src/assets/icons/elecicon.png" name="Electrician"/>
+               <Midboxicon image="./elecicon.png" name="Electrician"/>
                <Midboxicon image="src/assets/icons/plumicon.png" name="Plumber"/>
                <Midboxicon image="src/assets/icons/cleaningicon.png" name="Cleaning"/>
                <Midboxicon image="src/assets/icons/acicon.png" name="AC Service"/>
