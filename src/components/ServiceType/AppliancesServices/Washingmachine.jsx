@@ -16,7 +16,7 @@ const Washingmachine = () => {
 
   return (
     <>
-      <ServiceBox serviceName="Washing Machine Service" items={Items} />
+     <ServiceBox serviceName="Washing Machine Service" items={Items} />
 
       <div className="box2">
         {/* BED */}
@@ -30,7 +30,7 @@ const Washingmachine = () => {
               reviews="5K"
               price="10000"
               duration="4 days"
-              image="/src/assets/images/bed1.png" 
+              image="images/bed1.png" 
             />
           ))}
         </div>
@@ -46,7 +46,7 @@ const Washingmachine = () => {
               reviews="2K"
               price="15000"
               duration="5 days"
-              image="/src/assets/images/bed1.png"
+              image="images/bed1.png"
             />
           ))}
         </div>

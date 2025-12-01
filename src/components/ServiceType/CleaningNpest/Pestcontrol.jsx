@@ -31,7 +31,7 @@ const Pestcontrol = () => {
               reviews="5K"
               price="10000"
               duration="4 days"
-            
+            image="images/bed1.png"
             />
           ))}
         </div>
@@ -47,7 +47,7 @@ const Pestcontrol = () => {
               reviews="2K"
               price="15000"
               duration="5 days"
-         
+         image="images/bed1.png"
             />
           ))}
         </div>

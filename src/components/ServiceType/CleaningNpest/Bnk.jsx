@@ -29,7 +29,7 @@ const Bnk = () => {
                      reviews="5K"
                      price="10000"
                      duration="4 days"
-                     image="/src/assets/images/bed1.png"
+                     image="images/bed1.png"
                   />
                ))}
             </div>
@@ -45,7 +45,7 @@ const Bnk = () => {
                      reviews="2K"
                      price="15000"
                      duration="5 days"
-                     image="/src/assets/images/bed1.png"
+                     image="images/bed1.png"
                   />
                ))}
             </div>

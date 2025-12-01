@@ -5,16 +5,16 @@ import './MostBookingServices.css'; // optional if you plan to style layout
 
 
 const services = [
-  { image: 'src/assets/images/carpenter.png', serviceName: 'Carpenter', rating: '4.0', price: '400' },
-  { image: 'src/assets/images/ro.png', serviceName: 'RO Service', rating: '4.0', price: '400' },
-  { image: 'src/assets/images/ac.png', serviceName: 'AC Service', rating: '4.0', price: '400' },
-  { image: 'src/assets/images/kitchen.png', serviceName: 'Modular Kitchen', rating: '4.0', price: '400' },
-  { image: 'src/assets/images/bed.png', serviceName: 'King Size Bed', rating: '4.0', price: '10000' },
-  { image: 'src/assets/images/bed.png', serviceName: 'Carpenter', rating: '4.0', price: '400' },
-  { image: 'src/assets/images/bed.png', serviceName: 'Carpenter', rating: '4.0', price: '400' },
-  { image: 'src/assets/images/bed.png', serviceName: 'Carpenter', rating: '4.0', price: '400' },
-  { image: 'src/assets/images/bed.png', serviceName: 'Carpenter', rating: '4.0', price: '400' },
-  { image: 'src/assets/images/bed.png', serviceName: 'Carpenter', rating: '4.0', price: '400' },
+  { image: 'images/carpenter.png', serviceName: 'Carpenter', rating: '4.0', price: '400' },
+  { image: 'images/ro.png', serviceName: 'RO Service', rating: '4.0', price: '400' },
+  { image: 'images/ac.png', serviceName: 'AC Service', rating: '4.0', price: '400' },
+  { image: 'images/kitchen.png', serviceName: 'Modular Kitchen', rating: '4.0', price: '400' },
+  { image: 'images/bed.png', serviceName: 'King Size Bed', rating: '4.0', price: '10000' },
+  { image: 'images/bed.png', serviceName: 'Carpenter', rating: '4.0', price: '400' },
+  { image: 'images/bed.png', serviceName: 'Carpenter', rating: '4.0', price: '400' },
+  { image: 'images/bed.png', serviceName: 'Carpenter', rating: '4.0', price: '400' },
+  { image: 'images/bed.png', serviceName: 'Carpenter', rating: '4.0', price: '400' },
+  { image: 'images/bed.png', serviceName: 'Carpenter', rating: '4.0', price: '400' },
 
 ];
 

@@ -34,7 +34,7 @@ const FirstContainer = () => {
 
             <div className="botbox">
                <div className="sbotbox">
-                  <img src="src/assets/icons/rating.svg" className="sbotimg" />
+                  <img src="icons/rating.svg" className="sbotimg" />
                   <div className="sbottext">
                      <div id="rating">4.8</div>
                      <div id="serviceRating">Service rating*</div>
@@ -42,7 +42,7 @@ const FirstContainer = () => {
                </div>
 
                <div className="sbotbox">
-                  <img src="src/assets/icons/users.svg" className="sbotimg" />
+                  <img src="icons/users.svg" className="sbotimg" />
                   <div className="sbottext">
                      <div id="globaluser">12M+</div>
                      <div id="customerGlobaly">Customers Globally*</div>
