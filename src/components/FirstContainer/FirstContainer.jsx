@@ -1,7 +1,6 @@
 import React from "react";
 import "./FirstContainer.css";
 import Midboxicon from "./midboxicon";
-import caricon from "../../assets/icons/caricon.png";
 
 const FirstContainer = () => {
    return (
@@ -24,12 +23,12 @@ const FirstContainer = () => {
          <div className="rContainer">
             <div className="midbox">
                <p id="midboxpara">What are you looking for?</p>
-               <Midboxicon image={caricon} name="Carpenter"/>
-               <Midboxicon image="./elecicon.png" name="Electrician"/>
-               <Midboxicon image="src/assets/icons/plumicon.png" name="Plumber"/>
-               <Midboxicon image="src/assets/icons/cleaningicon.png" name="Cleaning"/>
-               <Midboxicon image="src/assets/icons/acicon.png" name="AC Service"/>
-               <Midboxicon image="src/assets/icons/roicon.png" name="Book a Consultation"/>
+               <Midboxicon image="icons/caricon.png" name="Carpenter"/>
+               <Midboxicon image="icons/elecicon.png" name="Electrician"/>
+               <Midboxicon image="icons/plumicon.png" name="Plumber"/>
+               <Midboxicon image="icons/cleaningicon.png" name="Cleaning"/>
+               <Midboxicon image="icons/acicon.png" name="AC Service"/>
+               <Midboxicon image="icons/roicon.png" name="Book a Consultation"/>
 
             </div>
 
