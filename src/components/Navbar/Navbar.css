@@ -60,3 +60,55 @@
 .loc:focus {
    outline: none;
 }
+
+
+@media (max-width: 992px) {
+   .nav {
+      padding: 0 20px;
+      height: 80px;
+   }
+
+   .logo {
+      font-size: 28px;
+   }
+
+   .inpt {
+      width: 180px;
+      height: 42px;
+   }
+}
+
+/* Mobile (≤ 768px) */
+@media (max-width: 768px) {
+   .middle {
+      display: none; /* hide search + location */
+   }
+
+   .nav {
+      justify-content: space-between;
+   }
+
+   .logo {
+      font-size: 26px;
+   }
+
+   .login {
+      gap: 10px;
+   }
+}
+
+/* Small Mobile (≤ 480px) */
+@media (max-width: 480px) {
+   .logo {
+      font-size: 22px;
+   }
+
+   .nav {
+      padding: 0 15px;
+      height: 70px;
+   }
+
+   .login img {
+      height: 22px;
+   }
+}
