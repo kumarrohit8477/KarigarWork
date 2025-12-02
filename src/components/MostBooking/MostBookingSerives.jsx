@@ -1,25 +1,10 @@
-import React from 'react';
-import { useRef, useState } from 'react';
-import MostBookingServicesItem from './MostBookingServicesItem';
-import './MostBookingServices.css'; // optional if you plan to style layout
+// MostBookingServices.jsx
+import React, { useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import MostBookingServicesItem from "./MostBookingServicesItem";
+import "./MostBookingServices.css";
 
-
-const services = [
-  { image: 'images/carpenter.png', serviceName: 'Carpenter', rating: '4.0', price: '400' },
-  { image: 'images/ro.png', serviceName: 'RO Service', rating: '4.0', price: '400' },
-  { image: 'images/ac.png', serviceName: 'AC Service', rating: '4.0', price: '400' },
-  { image: 'images/kitchen.png', serviceName: 'Modular Kitchen', rating: '4.0', price: '400' },
-  { image: 'images/bed.png', serviceName: 'King Size Bed', rating: '4.0', price: '10000' },
-  { image: 'images/bed.png', serviceName: 'Carpenter', rating: '4.0', price: '400' },
-  { image: 'images/bed.png', serviceName: 'Carpenter', rating: '4.0', price: '400' },
-  { image: 'images/bed.png', serviceName: 'Carpenter', rating: '4.0', price: '400' },
-  { image: 'images/bed.png', serviceName: 'Carpenter', rating: '4.0', price: '400' },
-  { image: 'images/bed.png', serviceName: 'Carpenter', rating: '4.0', price: '400' },
-
-];
-
-
-const MostBookingSerives = () => {
+const MostBookingServices = () => {
   const scrollRef = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -28,8 +13,8 @@ const MostBookingSerives = () => {
   const handleScroll = (direction) => {
     const scrollAmount = scrollRef.current.firstChild.offsetWidth + 16;
     scrollRef.current.scrollBy({
-      left: direction === 'left' ? -scrollAmount : scrollAmount,
-      behavior: 'smooth',
+      left: direction === "left" ? -scrollAmount : scrollAmount,
+      behavior: "smooth",
     });
   };
 
@@ -54,25 +39,37 @@ const MostBookingSerives = () => {
       <div className="title">Most Booked Services</div>
 
       <div className="thirdContainerMain">
-        <i className="fa-solid fa-chevron-left arrows2" onClick={() => handleScroll('left')}></i>
+        <i className="fa-solid fa-chevron-left arrows2" onClick={() => handleScroll("left")} />
 
         <div
-          className={`thirdContainerMainInner ${isDragging ? 'dragging' : ''}`}
+          className={`thirdContainerMainInner ${isDragging ? "dragging" : ""}`}
           ref={scrollRef}
           onMouseDown={startDragging}
           onMouseLeave={stopDragging}
           onMouseUp={stopDragging}
           onMouseMove={onDragging}
         >
-          {services.map((srv, index) => (
-            <MostBookingServicesItem key={index} {...srv} />
-          ))}
+
+          {/* -------------- ITEMS WRITTEN SEPARATELY -------------- */}
+          <Link to='/Carpenter'><MostBookingServicesItem image="images/carpenter.png" serviceName="Carpenter" rating="4.0" price="400"/></Link>
+          <Link to="/Ro"><MostBookingServicesItem image="images/ro.png" serviceName="RO Service" rating="4.0" price="400"/></Link>
+          <Link to="/Acservice"><MostBookingServicesItem image="images/ac.png" serviceName="AC Service" rating="4.0" price="400"/></Link>
+          <Link to="/Ro"><MostBookingServicesItem image="images/kitchen.png" serviceName="Modular Kitchen" rating="4.0" price="400"/></Link>
+          <Link to="/Ro"><MostBookingServicesItem image="images/bed.png" serviceName="King Size Bed" rating="4.0" price="10000"/></Link>
+          <Link to="/Ro"><MostBookingServicesItem image="images/bed.png" serviceName="King Size Bed" rating="4.0" price="10000"/></Link>
+          <Link to="/Ro"><MostBookingServicesItem image="images/bed.png" serviceName="King Size Bed" rating="4.0" price="10000"/></Link>
+          
+          
+          
+
+          {/* Add more manually if needed */}
+
         </div>
 
-        <i className="fa-solid fa-chevron-right arrows2" onClick={() => handleScroll('right')}></i>
+        <i className="fa-solid fa-chevron-right arrows2" onClick={() => handleScroll("right")} />
       </div>
     </div>
   );
 };
 
-export default MostBookingSerives;
+export default MostBookingServices;

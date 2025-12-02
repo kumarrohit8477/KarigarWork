@@ -19,25 +19,22 @@ import Aluminiumwork from "./components/ServiceType/HomeImprovementService/Alumi
 import FlooringNTiling from "./components/ServiceType/HomeImprovementService/FlooringNTiling";
 import PaintingnWaterproofing from "./components/ServiceType/HomeImprovementService/PaintingnWaterproofing";
 import SteelNWelding from "./components/ServiceType/HomeImprovementService/SteelNWelding";
-
-// Carpenter
-import Carpnew from "./components/ServiceType/HomeImprovementService/Carpenter/Carpnew";
-import Carprep from "./components/ServiceType/HomeImprovementService/Carpenter/Carprep";
-
-// Plumbing
-import PlumNew from "./components/ServiceType/HomeImprovementService/Plumber/PlumNew";
+import Carpenter from "./components/ServiceType/HomeImprovementService/Carpenter";
+import Plumber from "./components/ServiceType/HomeImprovementService/Plumber";
 
 // Appliances
 import Acservice from "./components/ServiceType/AppliancesServices/Acservice";
 import Microwave from "./components/ServiceType/AppliancesServices/Microwave";
 import Refrigerator from "./components/ServiceType/AppliancesServices/Refrigerator";
 import Washingmachine from "./components/ServiceType/AppliancesServices/Washingmachine";
-
+import Ro from "./components/ServiceType/AppliancesServices/Ro";
 // Cleaning & Pest
 import Bnk from "./components/ServiceType/CleaningNpest/Bnk";
 import Pestcontrol from "./components/ServiceType/CleaningNpest/Pestcontrol";
 import SofaNcarpet from "./components/ServiceType/CleaningNpest/SofaNcarpet";
 import Watertank from "./components/ServiceType/CleaningNpest/Watertank";
+
+//Most Booking Services
 
 function App() {
   const location = useLocation();
@@ -68,8 +65,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/cart" element={<Cart />} />
 
-        {/* SERVICE TYPE SELECTOR */}
-        <Route path="/Carpenter" element={<ServiceTypeSelector />} />
+        <Route path="/ServiceTypeSelector" element={<ServiceTypeSelector />} />
 
         {/* HOME IMPROVEMENT SERVICES */}
         <Route path="/Electrician" element={<Electrician />} />
@@ -78,19 +74,15 @@ function App() {
         <Route path="/FlooringNTiling" element={<FlooringNTiling />} />
         <Route path="/PaintingnWaterproofing" element={<PaintingnWaterproofing />} />
         <Route path="/SteelNWelding" element={<SteelNWelding />} />
-
-        {/* CARPENTER SUB-PAGES */}
-        <Route path="/Carpenter/Carpnew" element={<Carpnew />} />
-        <Route path="/Carpenter/Carprep" element={<Carprep />} />
-
-        {/* PLUMBER */}
-        <Route path="/Plumber" element={<PlumNew />} />
+        <Route path="/Carpenter" element={<Carpenter />} />
+        <Route path="/Plumber" element={<Plumber />} />
 
         {/* APPLIANCES */}
         <Route path="/Acservice" element={<Acservice />} />
         <Route path="/Microwave" element={<Microwave />} />
         <Route path="/Refrigerator" element={<Refrigerator />} />
         <Route path="/Washingmachine" element={<Washingmachine />} />
+        <Route path="/Ro" element={<Ro/>} />
 
         {/* CLEANING & PEST */}
        <Route path="/Bathroom&kitchen" element={<Bnk />} />

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './MostBookingServicesItem.css';
 
 const MostBookingServicesItem = ({ image, serviceName, rating, price }) => {

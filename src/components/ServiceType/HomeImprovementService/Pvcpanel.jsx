@@ -1,22 +1,25 @@
-import CServices from "../../CSevices"; 
-import ServiceBox from "../../../AllServices/ServiceBox";
+import React from 'react'
+import CServices from "../CSevices";
+import ServiceBox from "../../AllServices/ServiceBox";
+import "../Servicetype.css";
 
-const Carprep = () => {
+const Pvcpanel = () => {
   const Items = [
-    "Bed",
-    "Almirah",
-    "Kitchen",
-    "Doors",
-    "Tables",
-    "Chairs",
-    "Windows",
-    "Shelves",
-    "Cabinets",
-  ];
+  "Switch & socket",
+  "Wall & Ceiling light",
+  "Fan",
+  "Wiring",
+  "Socket replacement",
+  "MCB",
+  "Bell",
+  "Appliance",
+  "Book a consultation",
+];
+
 
   return (
     <>
-      <ServiceBox serviceName="Carpenter" items={Items} />
+      <ServiceBox serviceName="Electrician" items={Items} />
 
       <div className="box2">
         {/* BED */}
@@ -30,7 +33,8 @@ const Carprep = () => {
               reviews="5K"
               price="10000"
               duration="4 days"
-image="images/bed1.png"            />
+         image="images/bed1.png"
+            />
           ))}
         </div>
 
@@ -45,12 +49,15 @@ image="images/bed1.png"            />
               reviews="2K"
               price="15000"
               duration="5 days"
-image="images/bed1.png"            />
+             image="images/bed1.png"
+            />
           ))}
         </div>
+
+        {/* Add more sections similarly */}
       </div>
     </>
   );
-};
+}
 
-export default Carprep;
+export default Pvcpanel;

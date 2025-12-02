@@ -1,24 +1,18 @@
 import React from 'react'
 import './ServiceBox.css'
-
 const ServiceBox = ({ serviceName, items }) => {
-
   const scrollToSection = (name) => {
     const id = name.toLowerCase() + "-section";
     const section = document.getElementById(id);
-
     if (section) {
       const yOffset = -170; // height of your navbar
       const y =
         section.getBoundingClientRect().top +
         window.pageYOffset +
         yOffset;
-
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
-
   };
-
   return (
     <div className="service-container">
       <h2>{serviceName}</h2>
@@ -36,5 +30,4 @@ const ServiceBox = ({ serviceName, items }) => {
     </div>
   );
 };
-
 export default ServiceBox;

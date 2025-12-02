@@ -1,5 +1,6 @@
 import React from "react";
 import "./FirstContainer.css";
+import { Link } from "react-router-dom";
 import Midboxicon from "./midboxicon";
 
 const FirstContainer = () => {
@@ -23,11 +24,11 @@ const FirstContainer = () => {
          <div className="rContainer">
             <div className="midbox">
                <p id="midboxpara">What are you looking for?</p>
-               <Midboxicon image="icons/caricon.png" name="Carpenter"/>
-               <Midboxicon image="icons/elecicon.png" name="Electrician"/>
-               <Midboxicon image="icons/plumicon.png" name="Plumber"/>
-               <Midboxicon image="icons/cleaningicon.png" name="Cleaning"/>
-               <Midboxicon image="icons/acicon.png" name="AC Service"/>
+               <Link to='Carpenter'><Midboxicon image="icons/caricon.png" name="Carpenter"/></Link>
+               <Link to='Electrician'><Midboxicon image="icons/elecicon.png" name="Electrician"/></Link>
+               <Link to='Plumber'><Midboxicon image="icons/plumicon.png" name="Plumber"/></Link>
+               <Link to='ServiceTypeSelector'><Midboxicon image="icons/cleaningicon.png" name="Cleaning"/></Link>
+               <Link to='Acservice'><Midboxicon image="icons/acicon.png" name="AC Service"/></Link>
                <Midboxicon image="icons/roicon.png" name="Book a Consultation"/>
 
             </div>
