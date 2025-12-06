@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import FirstContainer from "./components/FirstContainer/FirstContainer";
 import SecondContainer from "./components/SecondContainer/SecondContainer";
@@ -21,6 +21,7 @@ import PaintingnWaterproofing from "./components/ServiceType/HomeImprovementServ
 import SteelNWelding from "./components/ServiceType/HomeImprovementService/SteelNWelding";
 import Carpenter from "./components/ServiceType/HomeImprovementService/Carpenter";
 import Plumber from "./components/ServiceType/HomeImprovementService/Plumber";
+import FurnitureRepair from "./components/ServiceType/HomeImprovementService/FurnitureRepair";
 
 // Appliances
 import Acservice from "./components/ServiceType/AppliancesServices/Acservice";
@@ -64,6 +65,7 @@ function App() {
         {/* STATIC PAGES */}
         <Route path="/login" element={<Login />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="" element=""/>
 
         <Route path="/ServiceTypeSelector" element={<ServiceTypeSelector />} />
 
@@ -76,6 +78,7 @@ function App() {
         <Route path="/SteelNWelding" element={<SteelNWelding />} />
         <Route path="/Carpenter" element={<Carpenter />} />
         <Route path="/Plumber" element={<Plumber />} />
+        <Route path="/FurnitureRepair" element={<FurnitureRepair />} />
 
         {/* APPLIANCES */}
         <Route path="/Acservice" element={<Acservice />} />

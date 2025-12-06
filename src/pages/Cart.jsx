@@ -1,99 +1,97 @@
-import React from "react";
+import React, { useMemo } from "react";
 import "./Cart.css";
-import { useNavigate } from "react-router-dom";
-import counterContext from "../context/context";
-import Cartin from "./Cartin";
+import { useCart } from "../context/CartContext";
+import CartItem from "./CartItem";
+import { Link } from 'react-router-dom';
 const Cart = () => {
-   const navigate = useNavigate();
-   const goHome = () => {
-      navigate("/");
-   };
-   const count = React.useContext(counterContext);
-   const total = 1097;
+   const { cartItems, updateQuantity, removeItem } = useCart();
+
+   // ---------- Calculations ----------
+   const { subtotal, taxes, convenienceFee, totalAmount } = useMemo(() => {
+      const sub = cartItems.reduce(
+         (acc, item) => acc + item.price * item.quantity,
+         0
+      );
+      const tax = Math.round(sub * 0.18);
+      const fee = 49;
+      return {
+         subtotal: sub,
+         taxes: tax,
+         convenienceFee: fee,
+         totalAmount: sub + tax + fee,
+      };
+   }, [cartItems]);
+
+   // ---------- Empty Cart ----------
+   if (cartItems.length === 0) {
+      return (
+         <div className="empty-cart">
+            <h2>Your Cart is Empty 😔</h2>
+            <p>Add services to continue</p>
+            <button className="browse-btn"><Link to="/">Browse Services</Link></button>
+         </div>
+      );
+   }
    return (
-      <>
-         <button onClick={goHome} className="rethome">X</button>
-         <div className="cart-container">
-            {/* --- Header --- */}
-            <header className="cart-header">
-               <h1 className="page-title ttl">My Cart ({count} items)</h1>
-            </header>
+      <div className="cart-container">
+         <h1 className="page-title">My Cart</h1>
 
-            {/* --- Main Content --- */}
-            <div className="cart-content">
-               {/* Service Items */}
-               <section className="service-items">
-                  <Cartin />
-                  <Cartin />
-                  <Cartin />
-               </section>
+         <div className="cart-layout">
+            {/* ---------- Cart Items Section ---------- */}
+            <div className="cart-items-section">
+               {cartItems.map((item) => (
+                  <CartItem
+                     key={item.id}
+                     item={item}
+                     updateQuantity={updateQuantity}
+                     removeItem={removeItem}
+                  />
+               ))}
 
-               <hr className="section-divider" />
-
-               {/* Schedule and Location */}
-               <section className="schedule-section">
-                  <div className="location">
-                     <p className="section-title">Service Address</p>
-                     <p className="info-text">123, Service Lane, New Delhi - 110001</p>
-                     <button className="btn-change">Change</button>
+               {/* ---------- Date/Time Slot Selector ---------- */}
+               <div className="slot-selector">
+                  <span className="slot-icon">📅</span>
+                  <div className="slot-text">
+                     <h4>Select Date & Time</h4>
+                     <p>Choose your preferred time slot</p>
                   </div>
-                  <div className="date-time">
-                     <p className="section-title">Schedule</p>
-                     <p className="info-text">Wed, 29th Oct | 10:00 AM - 11:00 AM</p>
-                     <button className="btn-change">Change</button>
-                  </div>
-               </section>
-
-               <hr className="section-divider" />
-
-               {/* Coupon Section */}
-               <section className="coupon-section">
-                  <p className="section-title">Apply Coupon</p>
-                  <div className="coupon-input">
-                     <input
-                        type="text"
-                        placeholder="Enter Coupon Code"
-                        className="coupon-field"
-                     />
-                     <button className="btn-apply">APPLY</button>
-                  </div>
-               </section>
-
-               {/* Price Summary */}
-               <section className="price-summary">
-                  <p className="section-title">Bill Details</p>
-                  <div className="bill-row">
-                     <span>Item Total</span>
-                     <span>₹ 1258</span>
-                  </div>
-                  <div className="bill-row">
-                     <span>Discount (FLAT20)</span>
-                     <span className="discount-color">- ₹ 251</span>
-                  </div>
-                  <div className="bill-row">
-                     <span>Taxes & Fees</span>
-                     <span>+ ₹ 90</span>
-                  </div>
-                  <div className="bill-row total-row">
-                     <span>Grand Total</span>
-                     <span className="total-price">₹ {total}</span>
-                  </div>
-               </section>
+                  <button className="arrow-btn">{">"}</button>
+               </div>
             </div>
 
-            {/* --- Sticky Footer --- */}
-            <footer className="sticky-footer">
-               <div className="total-display">
-                  <p className="total-text">₹ {total}</p>
-                  <p className="view-details">View Details</p>
-               </div>
-               <button className="btn primary-btn checkout-btn">
-                  Proceed to Checkout
-               </button>
-            </footer>
-         </div>
-      </>
+            {/* ---------- Billing Section ---------- */}
+            <div className="bill-section">
+               <div className="bill-card">
+                  <h2>Payment Summary</h2>
 
+                  <div className="bill-row">
+                     <span>Item Total</span>
+                     <span>₹{subtotal}</span>
+                  </div>
+
+                  <div className="bill-row">
+                     <span>Taxes & GST (18%)</span>
+                     <span>₹{taxes}</span>
+                  </div>
+
+                  <div className="bill-row">
+                     <span>Convenience Fee</span>
+                     <span>₹{convenienceFee}</span>
+                  </div>
+
+                  <hr />
+
+                  <div className="bill-row total">
+                     <span>Total Amount</span>
+                     <span>₹{totalAmount}</span>
+                  </div>
+
+                  <button className="checkout-btn">Proceed to Checkout</button>
+                  <p className="secure-text">🔒 Secure & Encrypted Payment</p>
+               </div>
+            </div>
+         </div>
+      </div>
    );
 };
 

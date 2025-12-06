@@ -1,7 +1,10 @@
 import React from 'react';
 import './cServices.css';
+import { useCart } from "../../context/CartContext";
 
-const CServices = ({ name, rating, reviews, price, duration, image }) => {
+
+const CServices = ({ id, name, rating, reviews, price, duration, image }) => {
+  const { addToCart } = useCart();
   return (
     <div className="svces">
       <div className="ite">
@@ -17,7 +20,16 @@ const CServices = ({ name, rating, reviews, price, duration, image }) => {
       </div>
       <div className="item">
         <img src={image} alt={name} />
-        <button className='btnn'>Add</button>
+        <button className='btnn' onClick={() =>
+          addToCart({
+            id,
+            name,
+            category: "Carpenter",
+            price,
+            image,
+          })
+        }>Add</button>
+
       </div>
     </div>
   );

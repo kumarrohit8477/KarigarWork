@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import CServices from "../CSevices";
 import ServiceBox from "../../AllServices/ServiceBox";
@@ -12,182 +12,112 @@ const Carpenter = () => {
     "Doors",
     "Tables",
     "Chairs",
-    "Chairs",
-    "Chairs",
-    "Chairs",
     "Hangers & Drill",
-    "Furniture Repair",
+    <Link to='/FurnitureRepair'>Furniture Repair</Link>,
     <Link to='/Watertank'>Book a Consultation</Link>
   ];
 
   return (
     <>
       <ServiceBox serviceName="Carpenter" items={Items} />
+
       <div className="box2">
-        {/*1 BED */}
+
+        {/* BED SECTION */}
         <div id="bed-section" className="nm">Bed</div>
         <div className="box3">
-          <CServices name="Normal Bed (with side tables)(6X6)" rating="4.5" reviews="5K" price="10000" duration="4 days" image="images/bed1.png"/>
-          <CServices name="Normal Bed (with side tables)(6X6)" rating="4.5" reviews="5K" price="10000" duration="4 days" image="images/bed2.png"/>
-          <CServices name="Normal Bed (6X6)" rating="4.5" reviews="5K" price="8000" duration="4 days" image="images/bed3.png"/>
-          <CServices name="Normal Bed (with side tables)(6X6)" rating="4.5" reviews="5K" price="10000" duration="4 days" image="images/bed4.png"/>
-          <CServices name="Customised Bed (6X6)" rating="4.5" reviews="5K" price="8000" duration="4 days" image="images/bed4.png"/>
+          <CServices id={101} name="Normal Bed (Side Tables)" rating="4.5" reviews="5K" price={10000} duration="4 days" image="images/bed1.png" />
+          <CServices id={102} name="Normal Bed (Side Tables)" rating="4.5" reviews="5K" price={10000} duration="4 days" image="images/bed2.png" />
+          <CServices id={103} name="Normal Bed (6X6)" rating="4.5" reviews="5K" price={8000} duration="4 days" image="images/bed3.png" />
+          <CServices id={104} name="Normal Bed Premium" rating="4.5" reviews="5K" price={12000} duration="4 days" image="images/bed4.png" />
+          <CServices id={105} name="Customised Bed" rating="4.5" reviews="5K" price={8000} duration="4 days" image="images/bed4.png" />
         </div>
-        {/*2 ALMIRAH */} 
+
+        {/* ALMIRAH */}
         <div id="almirah-section" className="nm">Almirah</div>
         <div className="box3">
           {[...Array(10)].map((_, i) => (
             <CServices
-              key={i}
-              name="Normal Bed (with side tables)"
+              key={200 + i}
+              id={200 + i}
+              name="Wooden Almirah"
               rating="4.5"
               reviews="5K"
-              price="10000"
+              price={10000}
               duration="4 days"
-             image="images/bed1.png"
+              image="images/bed1.png"
             />
           ))}
         </div>
 
-        {/*3 KITCHEN */}
+        {/* DOORS */}
         <div id="doors-section" className="nm">Doors</div>
         <div className="box3">
           {[...Array(10)].map((_, i) => (
             <CServices
-              key={i}
-              name="Normal Bed (with side tables)"
+              key={300 + i}
+              id={300 + i}
+              name="Door Repair"
               rating="4.5"
               reviews="5K"
-              price="10000"
-              duration="4 days"
+              price={1500}
+              duration="1 hour"
               image="images/bed1.png"
             />
           ))}
         </div>
-        {/*4 BED */}
+
+        {/* KITCHEN */}
         <div id="kitchen-section" className="nm">Kitchen</div>
         <div className="box3">
           {[...Array(10)].map((_, i) => (
             <CServices
-              key={i}
-              name="Normal Bed (with side tables)"
+              key={400 + i}
+              id={400 + i}
+              name="Modular Kitchen Work"
               rating="4.5"
               reviews="5K"
-              price="10000"
-              duration="4 days"
+              price={20000}
+              duration="5 days"
               image="images/bed1.png"
             />
           ))}
         </div>
-        {/*5 Table*/}
+
+        {/* TABLES */}
         <div id="tables-section" className="nm">Tables</div>
         <div className="box3">
           {[...Array(10)].map((_, i) => (
             <CServices
-              key={i}
-              name="Normal Bed (with side tables)"
+              key={500 + i}
+              id={500 + i}
+              name="Table Fixing"
               rating="4.5"
               reviews="5K"
-              price="10000"
-              duration="4 days"
+              price={500}
+              duration="1 hour"
               image="images/bed1.png"
             />
           ))}
         </div>
-        {/*6 Chiars */}
+
+        {/* CHAIRS */}
         <div id="chairs-section" className="nm">Chairs</div>
         <div className="box3">
           {[...Array(10)].map((_, i) => (
             <CServices
-              key={i}
-              name="Normal Bed (with side tables)"
+              key={600 + i}
+              id={600 + i}
+              name="Chair Repair"
               rating="4.5"
               reviews="5K"
-              price="10000"
-              duration="4 days"
-              image="images/bed1.png"
-            />
-          ))}
-        </div>
-        {/*4 BED */}
-        <div id="kitchen-section" className="nm">Kitchen</div>
-        <div className="box3">
-          {[...Array(10)].map((_, i) => (
-            <CServices
-              key={i}
-              name="Normal Bed (with side tables)"
-              rating="4.5"
-              reviews="5K"
-              price="10000"
-              duration="4 days"
-              image="images/bed1.png"
-            />
-          ))}
-        </div>
-        {/*4 BED */}
-        <div id="kitchen-section" className="nm">Kitchen</div>
-        <div className="box3">
-          {[...Array(10)].map((_, i) => (
-            <CServices
-              key={i}
-              name="Normal Bed (with side tables)"
-              rating="4.5"
-              reviews="5K"
-              price="10000"
-              duration="4 days"
+              price={400}
+              duration="1 hour"
               image="images/bed1.png"
             />
           ))}
         </div>
 
-        {/*4 BED */}
-        <div id="kitchen-section" className="nm">Kitchen</div>
-        <div className="box3">
-          {[...Array(10)].map((_, i) => (
-            <CServices
-              key={i}
-              name="Normal Bed (with side tables)"
-              rating="4.5"
-              reviews="5K"
-              price="10000"
-              duration="4 days"
-              image="images/bed1.png"
-            />
-          ))}
-        </div>
-
-        {/*10 hangers */}
-        <div id="hangers & drill-section" className="nm">Hangers & Drill</div>
-        <div className="box3">
-          {[...Array(10)].map((_, i) => (
-            <CServices
-              key={i}
-              name="Normal Bed (with side tables)"
-              rating="4.5"
-              reviews="5K"
-              price="10000"
-              duration="4 days"
-              image="images/bed1.png"
-            />
-          ))}
-        </div>
-        {/*11 furiniture repair */}
-        <div id="furniture repair-section" className="nm">Furniture Repair</div>
-        <div className="box3">
-          {[...Array(13)].map((_, i) => (
-            <CServices
-              key={i}
-              name="Normal Bed (with side tables)"
-              rating="4.5"
-              reviews="5K"
-              price="10000"
-              duration="4 days"
-              image="images/bed1.png"
-            />
-          ))}
-        </div>
-
-        
       </div>
     </>
   );

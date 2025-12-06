@@ -1,203 +1,193 @@
-:root {
-  --primary-color: #00bcd4;
-  --text-color: #333;
-  --light-text: #666;
-  --border-color: #ddd;
-  --white: #fff;
-  --discount-color: #008000;
-  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-/* --- Main Container --- */
+/* ---------- Layout ---------- */
 .cart-container {
-  width: 100%;
-border-radius: 12px;
-  max-width: 450px;
-  background: var(--white);
-  min-height: 100vh;
-box-shadow: var(--shadow);
-  display: flex;
-  flex-direction: column;
-}
-
-/* --- Header --- */
-.cart-header {
-  display: flex;
-  align-items: center;
-  padding: 15px 20px;
-  border-bottom: 1px solid var(--border-color);
-  position: sticky;
-  top: 0;
-  border-radius: 12px 12px 0 0 ;
-  background: var(--white);
-  z-index: 10;
-}
-
-.back-button {
-  background: none;
-  border: none;
-  font-size: 24px;
-  color: var(--light-text);
-  cursor: pointer;
-  padding-right: 15px;
+  max-width: 1150px;
+  margin: auto;
+  padding: 20px;
+  font-family: "Segoe UI", sans-serif;
 }
 
 .page-title {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 28px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
 }
 
-/* --- Content --- */
-.cart-content {
-  flex-grow: 1;
-  padding: 20px;
-  padding-bottom: 100px;
+.cart-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
 }
 
-/* Divider */
-.section-divider {
-  border: 0;
-  height: 1px;
-  background: var(--border-color);
-  margin: 20px 0;
+/* ---------- Empty Cart ---------- */
+.empty-cart {
+  text-align: center;
+  margin-top: 50px;
+  color: #555;
 }
 
-.section-title {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--text-color);
-  margin-bottom: 15px;
-}
-
-/* --- Cart Items --- */
-
-
-/* --- Schedule Section --- */
-.schedule-section > div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.schedule-section .section-title {
-  margin-bottom: 0;
-  flex-basis: 30%;
-}
-
-.info-text {
-  font-size: 14px;
-  flex-grow: 1;
-  text-align: right;
-  padding-right: 10px;
-}
-
-.btn-change {
-  background: none;
-  border: 1px solid var(--primary-color);
-  color: var(--primary-color);
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-size: 12px;
-  font-weight: 600;
+.browse-btn {
+  padding: 12px 24px;
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
 }
 
-/* --- Coupon --- */
-.coupon-input {
+/* ---------- Cart Item ---------- */
+.cart-item {
   display: flex;
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
+  align-items: center;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  margin-bottom: 16px;
+  gap: 20px;
+  transition: 0.2s;
+}
+
+.cart-item:hover {
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.item-image {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.item-details {
+  flex: 1;
+}
+
+.item-category {
+  font-size: 14px;
+  color: #777;
+}
+
+.item-price {
+  font-weight: bold;
+}
+
+/* ---------- Quantity Buttons ---------- */
+.quantity-control {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
   overflow: hidden;
 }
 
-.coupon-field {
-  flex-grow: 1;
+.quantity-control button {
+  background: #f3f3f3;
   border: none;
-  padding: 10px 15px;
-  font-size: 14px;
-  outline: none;
-}
-
-.btn-apply {
-  background-color: var(--primary-color);
-  color: var(--white);
-  border: none;
-  padding: 10px 15px;
-  font-weight: 600;
+  padding: 6px 12px;
   cursor: pointer;
 }
 
-/* --- Price Summary --- */
-.price-summary {
-  padding-top: 10px;
+.quantity-control button:hover {
+  background: #e2e2e2;
+}
+
+.quantity-control span {
+  padding: 0 10px;
+  font-weight: 600;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: #df3b3b;
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-top: 4px;
+}
+
+/* ---------- Slot Selector ---------- */
+.slot-selector {
+  display: flex;
+  align-items: center;
+  border: 1px dashed #007bff;
+  background: #eef6ff;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.slot-icon {
+  font-size: 26px;
+  margin-right: 12px;
+}
+
+.arrow-btn {
+  margin-left: auto;
+  border: none;
+  background: none;
+  font-size: 20px;
+  color: #007bff;
+}
+
+/* ---------- Billing Card ---------- */
+.bill-card {
+  background: white;
+  border-radius: 12px;
+  padding: 22px;
+  border: 1px solid #ddd;
+  position: sticky;
+  top: 20px;
+}
+
+.bill-card h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .bill-row {
   display: flex;
   justify-content: space-between;
-  padding: 8px 0;
-  font-size: 14px;
+  margin-bottom: 12px;
+  color: #555;
 }
 
-.bill-row span:first-child {
-  color: var(--light-text);
-}
-
-.bill-row.total-row {
-  border-top: 1px dashed var(--border-color);
-  margin-top: 10px;
-  padding-top: 15px;
+.bill-row.total {
+  font-weight: bold;
   font-size: 18px;
-  font-weight: 700;
-  color: var(--text-color);
-}
-
-.discount-color {
-  color: var(--discount-color);
-  font-weight: 600;
-}
-
-/* --- Footer --- */
-.sticky-footer {
-  position: fixed;
-  border-radius: 0 0 12px 12px ;
-  bottom: 0;
-  width: 100%;
-  max-width: 450px;
-  background: var(--white);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.total-display {
-  line-height: 1.2;
-}
-
-.total-text {
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--text-color);
-}
-
-.view-details {
-  font-size: 12px;
-  color: var(--primary-color);
-  font-weight: 600;
-  cursor: pointer;
 }
 
 .checkout-btn {
-  width: 55%;
-  padding: 12px 15px;
-  margin-bottom: 0;
-  background: var(--primary-color);
-  color: var(--white);
+  width: 100%;
+  padding: 14px;
+  background: #6c5ce7;
   border: none;
-  border-radius: 6px;
-  font-weight: 600;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
   cursor: pointer;
+  margin-top: 20px;
+}
+
+.checkout-btn:hover {
+  background: #594cd1;
+}
+
+.secure-text {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 12px;
+  color: #777;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .cart-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-item {
+    flex-wrap: nowrap;
+  }
 }
