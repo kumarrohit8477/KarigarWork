@@ -22,7 +22,7 @@ export const CartProvider = ({ children }) => {
     });
   };
 
-  // Update quantity
+  // Update quantity (+1 / -1)
   const updateQuantity = (id, delta) => {
     setCartItems((prev) =>
       prev
@@ -38,9 +38,12 @@ export const CartProvider = ({ children }) => {
     setCartItems((prev) => prev.filter((i) => i.id !== id));
   };
 
+  // ⭐ Cart Counter (sum of quantities)
+  const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+
   return (
     <CartContext.Provider
-      value={{ cartItems, addToCart, updateQuantity, removeItem }}
+      value={{ cartItems, addToCart, updateQuantity, removeItem, cartCount }}
     >
       {children}
     </CartContext.Provider>
@@ -48,3 +51,4 @@ export const CartProvider = ({ children }) => {
 };
 
 export const useCart = () => useContext(CartContext);
+

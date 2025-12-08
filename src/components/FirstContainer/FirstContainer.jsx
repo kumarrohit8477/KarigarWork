@@ -29,7 +29,8 @@ const FirstContainer = () => {
                <Link to='Plumber'><Midboxicon image="icons/plumicon.png" name="Plumber"/></Link>
                <Link to='ServiceTypeSelector'><Midboxicon image="icons/cleaningicon.png" name="Cleaning"/></Link>
                <Link to='Acservice'><Midboxicon image="icons/acicon.png" name="AC Service"/></Link>
-               <Midboxicon image="icons/roicon.png" name="Book a Consultation"/>
+               <Link to='consultation'><Midboxicon image="icons/roicon.png" name="Book a Consultation"/></Link>
+               
 
             </div>
 

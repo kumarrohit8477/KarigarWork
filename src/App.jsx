@@ -11,6 +11,7 @@ import Footer from "./components/Footer/Footer";
 // Pages
 import Login from "./pages/Loginpg";
 import Cart from "./pages/Cart";
+import Consultation from "./pages/Consultation";
 
 // Service Pages
 import Electrician from "./components/ServiceType/HomeImprovementService/Electrician";
@@ -65,6 +66,7 @@ function App() {
         {/* STATIC PAGES */}
         <Route path="/login" element={<Login />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/consultation" element={<Consultation />}/>
         <Route path="" element=""/>
 
         <Route path="/ServiceTypeSelector" element={<ServiceTypeSelector />} />

@@ -4,7 +4,8 @@ import { useCart } from "../context/CartContext";
 import CartItem from "./CartItem";
 import { Link } from 'react-router-dom';
 const Cart = () => {
-   const { cartItems, updateQuantity, removeItem } = useCart();
+   const { cartItems, updateQuantity, removeItem, cartCount } = useCart();
+
 
    // ---------- Calculations ----------
    const { subtotal, taxes, convenienceFee, totalAmount } = useMemo(() => {
@@ -34,7 +35,7 @@ const Cart = () => {
    }
    return (
       <div className="cart-container">
-         <h1 className="page-title">My Cart</h1>
+         <h1 className="page-title">My Cart (Items {cartCount})</h1>
 
          <div className="cart-layout">
             {/* ---------- Cart Items Section ---------- */}

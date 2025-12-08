@@ -14,7 +14,7 @@ const Carpenter = () => {
     "Chairs",
     "Hangers & Drill",
     <Link to='/FurnitureRepair'>Furniture Repair</Link>,
-    <Link to='/Watertank'>Book a Consultation</Link>
+    <Link to='/consultation'>Book a Consultation</Link>
   ];
 
   return (
