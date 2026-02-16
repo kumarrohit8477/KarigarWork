@@ -61,7 +61,7 @@ const Login = () => {
 
           <button className="btn social-btn google-btn">
             <img
-              src="src/assets/icons/google-icon.svg"
+              src="icons/googio.png"
               alt="Google Icon"
               className="icon"
             />

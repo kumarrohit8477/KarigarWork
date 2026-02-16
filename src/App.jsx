@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { Routes, Route, useLocation, } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import FirstContainer from "./components/FirstContainer/FirstContainer";
@@ -12,6 +13,7 @@ import Footer from "./components/Footer/Footer";
 import Login from "./pages/Loginpg";
 import Cart from "./pages/Cart";
 import Consultation from "./pages/Consultation";
+import AddService from "./pages/Admin/AddService";
 
 // Service Pages
 import Electrician from "./components/ServiceType/HomeImprovementService/Electrician";
@@ -40,6 +42,15 @@ import Watertank from "./components/ServiceType/CleaningNpest/Watertank";
 
 function App() {
   const location = useLocation();
+  useEffect(() => {
+    // Make the request to your backend URL
+    fetch('http://localhost:5000/api/workers')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data); // Check your console to see the data
+      })
+      .catch(error => console.error('Error connecting:', error));
+  }, []);
 
   const hideNavbar =
     location.pathname === "/login" || location.pathname === "/cart";
@@ -68,6 +79,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/consultation" element={<Consultation />}/>
         <Route path="" element=""/>
+        <Route path="/admin/addservice" element={<AddService />} />
 
         <Route path="/ServiceTypeSelector" element={<ServiceTypeSelector />} />
 

@@ -46,7 +46,7 @@ const Footer = () => {
                     <div className="info">
                         <ul className="list">
                             <li>
-                                <a className="link" href="#">
+                                <a className="link" href="https://www.instagram.com/karigarwork_official/">
                                     <i className="fa-brands fa-instagram"></i> Instagram
                                 </a>
                             </li>

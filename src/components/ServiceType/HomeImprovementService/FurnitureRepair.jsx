@@ -7,18 +7,18 @@ import "../Servicetype.css";
 const FurnitureRepair = () => {
   const Items = [
     "Bed",
-    "Almirah",
-    "Kitchen",
+    "Clothe Hanger",
+    "Cupboard & drawer",
     "Doors",
-    "Tables",
-    "Chairs",
-    "Hangers & Drill",
-    <Link to='/Watertank'>Book a Consultation</Link>
+    "Windows & Curtains",
+    "Table & Chairs",
+    "Drill & Hang",
+    <Link to='/consultation'>Book a Consultation</Link>
   ];
 
   return (
     <>
-      <ServiceBox serviceName="Carpenter" items={Items} />
+      <ServiceBox serviceName="Furniture Repair" items={Items} />
 
       <div className="box2">
 
@@ -30,10 +30,11 @@ const FurnitureRepair = () => {
           <CServices id={103} name="Normal Bed (6X6)" rating="4.5" reviews="5K" price={8000} duration="4 days" image="images/bed3.png" />
           <CServices id={104} name="Normal Bed Premium" rating="4.5" reviews="5K" price={12000} duration="4 days" image="images/bed4.png" />
           <CServices id={105} name="Customised Bed" rating="4.5" reviews="5K" price={8000} duration="4 days" image="images/bed4.png" />
+          <CServices id={105} name="Customised Bed" rating="4.5" reviews="5K" price={8000} duration="4 days" image="images/bed4.png" />
         </div>
 
-        {/* ALMIRAH */}
-        <div id="almirah-section" className="nm">Almirah</div>
+        {/* Clothe Hanger */}
+        <div id="clothe hanger-section" className="nm">Clothe Hanger</div>
         <div className="box3">
           {[...Array(10)].map((_, i) => (
             <CServices
@@ -49,8 +50,8 @@ const FurnitureRepair = () => {
           ))}
         </div>
 
-        {/* DOORS */}
-        <div id="doors-section" className="nm">Doors</div>
+        {/* Cupboard & drawer */}
+        <div id="cupboard & drawer-section" className="nm">Cupboard & drawer</div>
         <div className="box3">
           {[...Array(10)].map((_, i) => (
             <CServices
@@ -66,8 +67,8 @@ const FurnitureRepair = () => {
           ))}
         </div>
 
-        {/* KITCHEN */}
-        <div id="kitchen-section" className="nm">Kitchen</div>
+        {/* Doors*/}
+        <div id="doors-section" className="nm">Doors</div>
         <div className="box3">
           {[...Array(10)].map((_, i) => (
             <CServices
@@ -83,8 +84,8 @@ const FurnitureRepair = () => {
           ))}
         </div>
 
-        {/* TABLES */}
-        <div id="tables-section" className="nm">Tables</div>
+        {/* Windows & Curtains */}
+        <div id="windows & curtains-section" className="nm">Windows & Curtains</div>
         <div className="box3">
           {[...Array(10)].map((_, i) => (
             <CServices
@@ -100,8 +101,24 @@ const FurnitureRepair = () => {
           ))}
         </div>
 
-        {/* CHAIRS */}
-        <div id="chairs-section" className="nm">Chairs</div>
+        {/* Table & Chairs */}
+        <div id="table & chairs-section" className="nm">Table & Chairs</div>
+        <div className="box3">
+          {[...Array(10)].map((_, i) => (
+            <CServices
+              key={600 + i}
+              id={600 + i}
+              name="Chair Repair"
+              rating="4.5"
+              reviews="5K"
+              price={400}
+              duration="1 hour"
+              image="images/bed1.png"
+            />
+          ))}
+        </div>
+        {/* Drill & Hang*/}
+        <div id="drill & hang-section" className="nm">Drill & Hang</div>
         <div className="box3">
           {[...Array(10)].map((_, i) => (
             <CServices

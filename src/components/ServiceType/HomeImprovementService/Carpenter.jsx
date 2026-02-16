@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import CServices from "../CSevices";
 import ServiceBox from "../../AllServices/ServiceBox";
 import "../Servicetype.css";
 
 const Carpenter = () => {
+  const [services, setServices] = useState([]);
+
+  // Fetch carpenter services from backend
+  useEffect(() => {
+    fetch("http://localhost:5000/services?category=carpenter")
+      .then((res) => res.json())
+      .then((data) => setServices(data))
+      .catch((err) => console.log(err));
+  }, []);
+
+  // Sidebar Items List
   const Items = [
     "Bed",
     "Almirah",
@@ -12,9 +23,8 @@ const Carpenter = () => {
     "Doors",
     "Tables",
     "Chairs",
-    "Hangers & Drill",
-    <Link to='/FurnitureRepair'>Furniture Repair</Link>,
-    <Link to='/consultation'>Book a Consultation</Link>
+    <Link to="/FurnitureRepair">Furniture Repair</Link>,
+    <Link to="/consultation">Book a Consultation</Link>
   ];
 
   return (
@@ -22,6 +32,27 @@ const Carpenter = () => {
       <ServiceBox serviceName="Carpenter" items={Items} />
 
       <div className="box2">
+
+        {/* BACKEND-DATA SECTION */}
+        {services.length > 0 && (
+          <>
+            <div className="nm">Carpenter Services (From Backend)</div>
+            <div className="box3">
+              {services.map((item) => (
+                <CServices
+                  key={item._id}
+                  id={item._id}
+                  name={item.name}
+                  rating={item.rating || "4.5"}
+                  reviews={item.reviews || "5K"}
+                  price={item.price}
+                  duration={item.duration || "1 day"}
+                  image={item.image || "images/bed1.png"}
+                />
+              ))}
+            </div>
+          </>
+        )}
 
         {/* BED SECTION */}
         <div id="bed-section" className="nm">Bed</div>
@@ -33,7 +64,7 @@ const Carpenter = () => {
           <CServices id={105} name="Customised Bed" rating="4.5" reviews="5K" price={8000} duration="4 days" image="images/bed4.png" />
         </div>
 
-        {/* ALMIRAH */}
+        {/* ALMIRAH SECTION */}
         <div id="almirah-section" className="nm">Almirah</div>
         <div className="box3">
           {[...Array(10)].map((_, i) => (
@@ -50,7 +81,7 @@ const Carpenter = () => {
           ))}
         </div>
 
-        {/* DOORS */}
+        {/* DOORS SECTION */}
         <div id="doors-section" className="nm">Doors</div>
         <div className="box3">
           {[...Array(10)].map((_, i) => (
@@ -67,7 +98,7 @@ const Carpenter = () => {
           ))}
         </div>
 
-        {/* KITCHEN */}
+        {/* KITCHEN SECTION */}
         <div id="kitchen-section" className="nm">Kitchen</div>
         <div className="box3">
           {[...Array(10)].map((_, i) => (
@@ -84,7 +115,7 @@ const Carpenter = () => {
           ))}
         </div>
 
-        {/* TABLES */}
+        {/* TABLES SECTION */}
         <div id="tables-section" className="nm">Tables</div>
         <div className="box3">
           {[...Array(10)].map((_, i) => (
@@ -101,7 +132,7 @@ const Carpenter = () => {
           ))}
         </div>
 
-        {/* CHAIRS */}
+        {/* CHAIRS SECTION */}
         <div id="chairs-section" className="nm">Chairs</div>
         <div className="box3">
           {[...Array(10)].map((_, i) => (
